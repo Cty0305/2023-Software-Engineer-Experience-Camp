@@ -1,0 +1,53 @@
+body{
+    background-color:$black-100;
+    color:$black-0;
+    font-weight: $regular;
+    font-family: $font-family;
+    a{
+        text-decoration: none;
+        color:$black-0;
+    }
+}
+
+.container-top{
+    max-width: 1296px;
+    margin: 0 auto;
+    
+    .navbar{
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom:1px solid $black-0;
+        align-items: center;
+        .menulist{
+            display: flex;
+            justify-content: space-between;
+            gap:20px;
+            .menuitem{
+                display: block;
+            }
+            .body{
+                font-weight: 700;
+            }
+        }
+        .body{
+            color:$black-0;
+        }
+    }
+
+    .kv{
+        .kv-title{
+            margin: 40px 0;
+        }
+        .d2{
+            font-weight: $bold;
+        }
+        a{
+            display: inline-block;
+            border: 1px solid $black-0;
+            border-radius: 16px;
+            padding: 20px 40px;
+        }
+    }
+}
+
