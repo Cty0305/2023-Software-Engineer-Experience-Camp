@@ -1,0 +1,143 @@
+$font-family: "Noto Sans TC, sans-serif";
+
+
+// font-weight
+$regular:400;
+$bold:900;
+
+// color
+$black-100: #020202;
+$black-80: #525252;
+$black-60: #919191;
+$black-20: #f2f2f2;
+$black-0: #ffffff;
+$primary: #f18724;
+$surface: #f2efe7;
+
+// all
+*{
+    font-family: $font-family;
+}
+
+// Typography
+.d1,.d2,.d3,.h1,.h2,.h3,.h4,.h5,.h6{
+    font-weight: 900;
+    line-height: 1.2;
+}
+.d1{
+    font-size: 160px;
+    font-weight: 700;
+}
+
+.d2{
+    font-size: 120px;
+    font-weight: $regular;
+}
+
+.d3{
+    font-size: 80px;
+    font-weight: $regular;
+}
+
+.h1{
+    font-size: 3rem;
+    font-weight: $regular;
+}
+
+.h2{
+    font-size:2.5rem;
+    font-weight: $regular;
+}
+
+.h3{
+    font-size: 2rem;
+    font-weight: $regular;
+}
+
+.h4{
+    font-size: 1.75rem;
+    font-weight: $regular;
+}
+
+.h5{
+    font-size: 1.5rem;
+    font-weight: $regular;
+}
+
+.h6{
+    font-size: 1.25rem;
+    font-weight: $regular;
+}
+
+.body{
+    font-size: 1rem;
+    font-weight: $regular;
+    line-height: 24px;
+}
+
+.small{
+    font-size: 0.875rem;
+    font-weight: $regular;
+    line-height: 21px;
+}
+
+.tiny{
+    font-size: 0.75rem;
+    font-weight: $regular;
+    line-height: 18px;
+}
+
+@media(max-width:768px){
+    .mb-h1,.mb-h2,.mb-h3,.mb-h4,.mb-h5,.mb-h6{
+        font-weight: 900;
+        line-height: 1.2;
+    }
+    .mb-h1{
+        font-size: 3rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h2{
+        font-size:2.5rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h3{
+        font-size: 2rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h4{
+        font-size: 1.75rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h5{
+        font-size: 1.5rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h6{
+        font-size: 1.25rem;
+        font-weight: $regular;
+    }
+    
+    .mb-body{
+        font-size: 1rem;
+        font-weight: $regular;
+        line-height: 24px;
+    }
+    
+    .mb-small{
+        font-size: 0.875rem;
+        font-weight: $regular;
+        line-height: 21px;
+    }
+    
+    .mb-tiny{
+        font-size: 0.75rem;
+        font-weight: $regular;
+        line-height: 18px;
+    }
+}
+
