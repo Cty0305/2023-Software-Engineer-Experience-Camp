@@ -20,6 +20,11 @@ body{
         justify-content: space-between;
         border-bottom:1px solid $black-0;
         align-items: center;
+        .logo{
+            img{
+                height: 40px;
+            }
+        }
         .menulist{
             display: flex;
             justify-content: space-between;
@@ -100,16 +105,26 @@ body{
         .logolist{
             height: 80px;
             margin: 80px 0 160px 0;
-            display: block;
+            display: flex;            
             flex-direction: column;
             gap:20px;
-            .logo{
+            .logogroup{
                 height: 40px;
+                display: flex;
+                justify-content: center;
+                gap:20px;
+                .logo{
+                    img{
+                        max-width: initial;
+                        width: 160px;
+                        height: 40px;
+                    }
+                }
             }
         }
         .testimoniallist{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             gap: 24px;
             .testimonialcard{
                 background: #FFFFFF14;
@@ -201,22 +216,20 @@ body{
                 align-items: center;
                 gap: 8px;
                 .filteritem{
+                    display: block;
                     padding: 8px 16px;
                     text-align: center;
                     border-radius: 16px;
                     white-space: nowrap;
+                    &:hover{
+                        background-color: $black-20;
+                        .body{
+                            color: $black-100;
+                        }
+                    }
                     .body{
                         color: $black-60;
                         font-weight: 700;
-                        &:hover{
-                            color: black;
-                        }
-                    }
-                    a{
-                        display: block;
-                    }
-                    a:hover{
-                        background-color: $black-100;
                     }
                 }
             }
@@ -250,6 +263,15 @@ body{
                 .card-img{
                     height: 312px;
                     overflow: hidden;
+                    img{
+                        object-fit: contain;
+                        transition:all 0.3s ease-out;
+                        overflow:hidden;
+                        &:hover{
+                            transform:scale(1.2);
+                            transition:all 0.3s ease-in;
+                        }
+                    }
                 }
                 .card-content{
                     display: flex;
@@ -309,6 +331,16 @@ body{
                 justify-content: center;
                 width: 48px;
                 height: 48px;
+                border-radius: 16px;
+                &:hover{
+                    background-color: $black-100;
+                    a{
+                        color: $black-0;
+                    }
+                    .material-icons{
+                        color: $black-0;
+                    }
+                }
                 a{
                     font-weight: 700;
                     text-align: center; 
@@ -352,7 +384,6 @@ body{
     .footer{
         .footermenu-top{
             border-top: 1px solid $black-0;
-            border-bottom: 1px solid $black-0;
             display: flex;
             justify-content: space-between;
             padding: 80px 0;
@@ -365,20 +396,27 @@ body{
                     color: $black-0;
                 }
             }
+            .footer-logo{
+                img{
+                    height: 40px;
+                }
+            }
         }
         .footermenu-bottom{
+            border-top: 1px solid $black-0;
             height: 88px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             .privacy-policy{
                 color: $black-0;
                 font-weight: 700;
+                margin-right: 100px;
             }
             .socialmediamenu{
                 display: flex;
                 justify-content: space-between;
                 gap:20px;
+                margin-right: 702px;
                 .socialmedia-item{
                     font-weight: 700;
                     color: $black-0;
@@ -401,7 +439,7 @@ body{
 @media(max-width:767px){
     .container-top{
         padding: 0 12px;
-        .mb-navbar{
+        .navbar{
             height: 80px;
             .menulist{
                 display: none;
@@ -456,7 +494,12 @@ body{
         }
         .partner{
             .logolist{
+                max-width: 375px;
                 margin: 24px 0 48px 0;
+                gap:12px;
+                .logogroup{
+                    overflow: hidden;
+                }
             }
             .testimoniallist{
                 flex-direction: column;
@@ -519,13 +562,8 @@ body{
                 padding: 20px 0;
                 flex-wrap: wrap;
                 .privacy-policy{
-                    position: relative;
-                    width: 133px;
+                    position: relative;                    
                     display: inline;
-                }
-                a{
-                    position: relative;
-                    padding: 0;
                 }
                 .socialmediamenu{
                     order: 2;

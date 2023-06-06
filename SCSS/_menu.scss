@@ -1,0 +1,16 @@
+@import "homepage";
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    padding: 192px 107px;
+}
+
+.container-bottom .footer .footermenu-bottom .menu-backtotop{
+    display: none;
+}
+
