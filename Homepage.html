@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SCSS/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>AI工具王</title>
 </head>
 <body>
     <div class="container-top">
         <div class="navbar">
             <div class="logo">
-                <img src="Image/logo.svg" alt="">
-                <img src="Image/AI工具王.svg" alt="">
+                <a href="http://127.0.0.1:5500/Homepage.html"><img src="Image/logo.svg" alt="Logo"></a>
+                <a href="http://127.0.0.1:5500/Homepage.html"><img src="Image/AI工具王.svg" alt="Logo"></a>
             </div>
             <ul class="menulist">
-                <li class="menuitem body"><a href="#">首頁</a></li>
-                <li class="menuitem body"><a href="#">定價</a></li>
+                <li class="menuitem body"><a href="http://127.0.0.1:5500/Homepage.html">首頁</a></li>
+                <li class="menuitem body"><a href="http://127.0.0.1:5500/Pricing.html">定價</a></li>
             </ul>
-            <a href=""><span class="material-icons">menu</span></a> 
+            <a href="http://127.0.0.1:5500/Menu.html"><span class="material-icons">menu</span></a> 
         </div>
         <div class="kv">
             <div class="kv-title d2 mb-h1">透過</br>AI工具王的</br>強大模型</br>讓您的業務更聰明</div>
@@ -28,9 +29,9 @@
         <div class="animation">
             <ul class="grasslist">
                 <li class="grassitem">
-                    <img class="grass1" src="Image/1.png" alt="">
-                    <img class="grass2" src="Image/1.png" alt="">
-                    <img class="grass3" src="Image/1.png" alt="">
+                    <img class="grass1" src="Image/1.png" alt="Dynamic-grass">
+                    <img class="grass2" src="Image/1.png" alt="Dynamic-grass">
+                    <img class="grass3" src="Image/1.png" alt="Dynamic-grass">
                 </li>
             </ul>
         </div>
@@ -43,40 +44,56 @@
                 <li class="service-card">
                     <span class="material-icons">flash_on</span>
                     <div class="h3">快速</div>
-                    <div class="body">我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。</div>
+                    <p class="body">我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。</p>
                 </li>
                 <li class="service-card">
                     <span class="material-icons">auto_awesome</span>
                     <div class="h3">靈活</div>
-                    <div class="body">我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。</div>
+                    <p class="body">我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。</p>
                 </li>
                 <li class="service-card">
                     <span class="material-icons">library_add</span>
                     <div class="h3">擴充</div>
-                    <div class="body">我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。</div>
+                    <p class="body">我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。</p>
                 </li>
             </ul>
         </div>
         <div class="partner">
             <div class="h3 mb-h6">來自合作夥伴</div>
             <div class="logolist">
-                <ul class="logogroup">
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true" alt=""></li>
+                <ul class="logogroup logogroup-top">
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true" alt="enterprise6"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true" alt="enterprise1"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true" alt="enterprise2"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true" alt="enterprise3"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"alt="enterprise4"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"alt="enterprise5"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"alt="enterprise6"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true" alt="enterprise1"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true" alt="enterprise2" /></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"alt="enterprise3"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true" alt="enterprise4"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"alt="enterprise5"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true" alt="enterprise6"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"alt="enterprise4"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true" alt="enterprise5"/></li>
                 </ul>
-                <ul class="logogroup">
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise8.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise9.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise11.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise12.png?raw=true" alt=""></li>
-                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true" alt=""></li>
+                <ul class="logogroup logogroup-bottom">
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"alt="enterprise6"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true" alt="enterprise3"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"alt="enterprise4"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"alt="enterprise5"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"alt="enterprise6"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true" alt="enterprise1"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"alt="enterprise5"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true" alt="enterprise6"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true" alt="enterprise1"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true" alt="enterprise2" /></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"alt="enterprise3"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true" alt="enterprise4"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true" alt="enterprise2"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"alt="enterprise4"/></li>
+                    <li class="logo"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"alt="enterprise5"/></li>
                 </ul>
             </div>
             <div class="testimoniallist">
@@ -90,7 +107,7 @@
                     </ul>
                     <div class="body">非常喜歡 AI工具王 提供的 AI 模型租賃服務，使用起來非常方便，而且效果非常好。對於我們公司的業務來說，這個服務非常重要，因為我們需要大量的數據進行分析和預測，AI工具王 提供的 AI 模型能夠幫助我們節省大量時間和成本，實在是太棒了！</div>
                     <div class="customer">
-                        <img src="Image/Ellipse 3.png" alt="">
+                        <img src="Image/Ellipse 3.png" alt="customer">
                         <div class="profile">
                             <div class="name body">陳小姐</div>
                             <div class="companyname small">ABC科技有限公司</div>
@@ -107,7 +124,7 @@
                     </ul>
                     <div class="body">作為一家醫療器材公司，我們非常關注人工智能技術的應用，而 AI工具王 提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用 AI工具王 的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝 AI工具王 團隊的辛勤工作！</div>
                     <div class="customer">
-                        <img src="Image/Ellipse 3 (1).png" alt="">
+                        <img src="Image/Ellipse 3 (1).png" alt="customer">
                         <div class="profile">
                             <div class="name body">劉小姐</div>
                             <div class="companyname small">XYZ 醫療器材有限公司</div>
@@ -124,7 +141,7 @@
                     </ul>
                     <div class="body">我們銀行一直在尋找能夠幫助我們提高風險控制和客戶服務的解決方案，而 AI工具王 提供的 AI 模型租賃服務正好滿足了我們的需求。我們使用 AI工具王 的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我們更好地控制風險，提高客戶滿意度。非常感謝 AI工具王 團隊的支持！</div>
                     <div class="customer">
-                        <img src="Image/Ellipse 3 (2).png" alt="">
+                        <img src="Image/Ellipse 3 (2).png" alt="customer">
                         <div class="profile">
                             <div class="name body">黃先生</div>
                             <div class="companyname small">EFG 銀行</div>
@@ -139,31 +156,31 @@
             <div class="d3 mb-h3">這些超酷的應用，都來自 AI工具王</div>
             <div class="searchbar">
                 <span class="material-icons">search</span>
-                <div class="body">輸入關鍵字搜尋</div>
+                <input type="search" placeholder="輸入關鍵字搜尋" class="body">
             </div>
             <div class="filter">
-                <div class="filter-sign">
+                <a href=""><div class="filter-sign">
                     <div class="body">篩選</div>
                     <div class="material-icons">filter_alt</div>
-                </div>
+                </div></a>
                 <ul class="filterlist">
-                    <li class="filteritem"><a href="" class="body">全部</a></li>
-                    <li class="filteritem"><a href="" class="body">聊天</a></li>
-                    <li class="filteritem"><a href="" class="body">影像辨識</a></li>
-                    <li class="filteritem"><a href="" class="body">翻譯</a></li>
-                    <li class="filteritem"><a href="" class="body">行銷</a></li>
-                    <li class="filteritem"><a href="" class="body">客服</a></li>
-                    <li class="filteritem"><a href="" class="body">生產力</a></li>
+                    <a href="" class="filteritem"><li class="body">全部</li></a>
+                    <a href="" class="filteritem"><li class="body">聊天</li></a>
+                    <a href="" class="filteritem"><li class="body">影像辨識</li></a>
+                    <a href="" class="filteritem"><li class="body">翻譯</li></a>
+                    <a href="" class="filteritem"><li class="body">行銷</li></a>
+                    <a href="" class="filteritem"><li class="body">客服</li></a>
+                    <a href="" class="filteritem"><li class="body">生產力</li></a>
                 </ul>
-                <div class="filterselector">
+                <a href=""><div class="filterselector">
                     <div class="body">由新到舊</div>
                     <div class="material-icons">keyboard_arrow_down</div>
-                </div>
+                </div></a>
             </div>
             <ul class="cardlist">
                 <li class="card">
                     <div class="card-img">
-                        <img src="Image/Rectangle 36.svg" alt="">
+                        <img src="Image/Rectangle 36.svg" alt="project-image">
                     </div>
                     <div class="card-content">
                         <div class="card-detail">
@@ -182,7 +199,7 @@
                 </li>
                 <li class="card">
                     <div class="card-img">
-                        <img src="Image/Rectangle 38.svg" alt="">
+                        <img src="Image/Rectangle 38.svg" alt="project-image">
                     </div>
                     <div class="card-content">
                         <div class="card-detail">
@@ -201,7 +218,7 @@
                 </li>
                 <li class="card">
                     <div class="card-img">
-                        <img src="Image/Rectangle 40.svg" alt="">
+                        <img src="Image/Rectangle 40.svg" alt="project-image">
                     </div>
                     <div class="card-content">
                         <div class="card-detail">
@@ -220,7 +237,7 @@
                 </li>
                 <li class="card">
                     <div class="card-img">
-                        <img src="Image/Rectangle 37.svg" alt="">
+                        <img src="Image/Rectangle 37.svg" alt="project-image">
                     </div>
                     <div class="card-content">
                         <div class="card-detail">
@@ -239,7 +256,7 @@
                 </li>
                 <li class="card">
                     <div class="card-img">
-                        <img src="Image/Rectangle 39.svg" alt="">
+                        <img src="Image/Rectangle 39.svg" alt="project-image">
                     </div>
                     <div class="card-content">
                         <div class="card-detail">
@@ -258,7 +275,7 @@
                 </li>
                 <li class="card">
                     <div class="card-img">
-                        <img src="Image/Rectangle 35.svg" alt="">
+                        <img src="Image/Rectangle 35.svg" alt="project-image">
                     </div>
                     <div class="card-content">
                         <div class="card-detail">
@@ -277,12 +294,12 @@
                 </li>
             </ul>
             <ul class="pagination">
-                <li class="pageitem"><a href="" class="small">1</a></li>
-                <li class="pageitem"><a href="" class="small">2</a></li>
-                <li class="pageitem"><a href="" class="small">3</a></li>
-                <li class="pageitem"><a href="" class="small">4</a></li>
-                <li class="pageitem"><a href="" class="small">5</a></li>
-                <li class="pageitem"><a href=""><div class="material-icons">keyboard_arrow_right</div></a></li>
+                <a href="" class="pageitem"><li class="small">1</li></a>
+                <a href="" class="pageitem"><li class="small">2</li></a>
+                <a href="" class="pageitem"><li class="small">3</li></a>
+                <a href="" class="pageitem"><li class="small">4</li></a>
+                <a href="" class="pageitem"><li class="small">5</li></a>
+                <a href=""><li class="pageitem"><div class="material-icons">keyboard_arrow_right</div></li></a>
             </ul>
         </div>  
     </div>
@@ -294,24 +311,27 @@
         <div class="footer">
             <div class="footermenu-top">
             <ul class="footer-menulist">
-                <li class="footer-menuitem d3 mb-h1">首頁</li>
-                <li class="footer-menuitem d3 mb-h1">定價</li>
+                <a href="http://127.0.0.1:5500/Homepage.html"><li class="footer-menuitem d3 mb-h1">首頁</li></a>
+                <a href="http://127.0.0.1:5500/Pricing.html"><li class="footer-menuitem d3 mb-h1">定價</li></a>
             </ul>
             <div class="footer-logo">
-                <img src="Image/logo.svg" alt="">
-                <img src="Image/AI工具王.svg" alt="">
+                <a href="http://127.0.0.1:5500/Homepage.html"><img src="Image/logo.svg" alt="Logo"></a>
+                <a href="http://127.0.0.1:5500/Homepage.html"><img src="Image/AI工具王.svg" alt="Logo"></a>
             </div>
             </div>
             <div class="footermenu-bottom">
             <div class="privacy-policy body">AI工具王 © 2023</div>
             <ul class="socialmediamenu">
-                <li class="socialmedia-item body"><a href="">Facebook</a></li>
-                <li class="socialmedia-item body"><a href="">Twitter</a></li>
-                <li class="socialmedia-item body"><a href="">Instagram</a></li>
+                <li class="socialmedia-item body"><a href="https://www.facebook.com/">Facebook</a></li>
+                <li class="socialmedia-item body"><a href="https://twitter.com/">Twitter</a></li>
+                <li class="socialmedia-item body"><a href="https://www.instagram.com/">Instagram</a></li>
             </ul>
             <a href="" class="backtotop"><span class="body">Back to top</span><div class="material-icons">arrow_upward</div></span></a>
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="JS/all.js"></script>
 </body>
 </html>

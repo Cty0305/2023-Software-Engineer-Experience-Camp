@@ -179,6 +179,7 @@ body {
 body a {
   text-decoration: none;
   color: #ffffff;
+  display: inline-block;
 }
 
 .container-top {
@@ -186,13 +187,19 @@ body a {
   margin: 0 auto;
 }
 .container-top .navbar {
-  height: 80px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ffffff;
   align-items: center;
 }
-.container-top .navbar .logo img {
+.container-top .navbar .logo {
+  height: 40px;
+}
+.container-top .navbar .logo a {
+  display: contents;
+}
+.container-top .navbar .logo a img {
   height: 40px;
 }
 .container-top .navbar .menulist {
@@ -232,6 +239,33 @@ body a {
   display: flex;
   justify-content: flex-end;
 }
+.container-top .animation .grasslist .grassitem {
+  overflow: hidden;
+}
+.container-top .animation .grasslist .grassitem img {
+  position: relative;
+  animation: slide-up 3.5s ease-in-out infinite;
+}
+.container-top .animation .grasslist .grassitem .grass1 {
+  animation-delay: 0.5s;
+}
+.container-top .animation .grasslist .grassitem .grass2 {
+  animation-delay: 0.25s;
+}
+.container-top .animation .grasslist .grassitem .grass3 {
+  animation-delay: 0s;
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 .container-top .ourservice {
   margin: 160px 0;
 }
@@ -241,10 +275,10 @@ body a {
   margin-bottom: 80px;
 }
 .container-top .ourservice .service-title .h3 {
-  width: 414px;
+  font-weight: 900;
 }
 .container-top .ourservice .service-title .h1 {
-  width: 856px;
+  max-width: 856px;
   font-weight: 900;
 }
 .container-top .ourservice .service-cardlist {
@@ -253,7 +287,7 @@ body a {
   gap: 24px;
 }
 .container-top .ourservice .service-cardlist .service-card {
-  width: 416px;
+  max-width: 416px;
   border: 1px solid #525252;
   border-radius: 16px;
   padding: 80px 40px;
@@ -271,22 +305,44 @@ body a {
   font-weight: 900;
 }
 .container-top .partner .logolist {
-  height: 80px;
   margin: 80px 0 160px 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   gap: 20px;
+  background-image: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, rgb(0, 0, 0) 100%);
 }
 .container-top .partner .logolist .logogroup {
-  height: 40px;
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
+.container-top .partner .logolist .logogroup.logogroup-top {
+  animation: carousel 20s linear infinite;
+}
+.container-top .partner .logolist .logogroup.logogroup-bottom {
+  animation: carousel-reverse 20s linear infinite;
+}
 .container-top .partner .logolist .logogroup .logo img {
-  max-width: initial;
-  width: 160px;
+  position: relative;
+  z-index: -1;
+  max-width: 160px;
   height: 40px;
+}
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes carousel-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .container-top .partner .testimoniallist {
   display: flex;
@@ -341,7 +397,6 @@ body a {
 }
 .container-mid .container-mid-content .searchbar {
   background-color: #f2f2f2;
-  max-width: 1296px;
   display: flex;
   align-items: center;
   border-radius: 16px;
@@ -351,9 +406,21 @@ body a {
   color: #919191;
   margin-right: 15.51px;
 }
-.container-mid .container-mid-content .searchbar .body {
+.container-mid .container-mid-content .searchbar input {
+  width: 100%;
+  padding: 8px;
+  background-color: #f2f2f2;
   border: none;
   color: #919191;
+}
+.container-mid .container-mid-content .searchbar input:focus::-moz-placeholder {
+  color: transparent;
+}
+.container-mid .container-mid-content .searchbar input:focus::placeholder {
+  color: transparent;
+}
+.container-mid .container-mid-content .searchbar input:focus-visible {
+  outline: none;
 }
 .container-mid .container-mid-content .filter {
   margin-top: 24px;
@@ -381,9 +448,10 @@ body a {
   display: flex;
   align-items: center;
   gap: 8px;
+  overflow: hidden;
 }
 .container-mid .container-mid-content .filter .filterlist .filteritem {
-  display: block;
+  display: inline-block;
   padding: 8px 16px;
   text-align: center;
   border-radius: 16px;
@@ -486,7 +554,7 @@ body a {
 }
 .container-mid .container-mid-content .pagination {
   float: right;
-  width: 308px;
+  max-width: 308px;
   display: flex;
   justify-content: space-between;
   gap: 4px;
@@ -501,18 +569,14 @@ body a {
   border-radius: 16px;
 }
 .container-mid .container-mid-content .pagination .pageitem:hover {
+  color: #ffffff;
   background-color: #020202;
 }
-.container-mid .container-mid-content .pagination .pageitem:hover a {
+.container-mid .container-mid-content .pagination .pageitem:hover > .small {
   color: #ffffff;
 }
 .container-mid .container-mid-content .pagination .pageitem:hover .material-icons {
   color: #ffffff;
-}
-.container-mid .container-mid-content .pagination .pageitem a {
-  font-weight: 700;
-  text-align: center;
-  color: #020202;
 }
 .container-mid .container-mid-content .pagination .pageitem .material-icons {
   display: flex;
@@ -521,6 +585,11 @@ body a {
   color: #020202;
   height: 48px;
   width: 48px;
+}
+.container-mid .container-mid-content .pagination .small {
+  font-weight: 700;
+  text-align: center;
+  color: #020202;
 }
 
 .container-bottom {
@@ -565,6 +634,7 @@ body a {
   height: 40px;
 }
 .container-bottom .footer .footermenu-bottom {
+  width: 100%;
   border-top: 1px solid #ffffff;
   height: 88px;
   display: flex;
@@ -591,13 +661,14 @@ body a {
   align-items: center;
   gap: 12px;
 }
-.container-bottom .footer .footermenu-bottom a .backtotop {
+.container-bottom .footer .footermenu-bottom a .body {
   font-weight: 700;
   color: #ffffff;
 }
 
 @media (max-width: 767px) {
   .container-top {
+    max-width: 743px;
     padding: 0 12px;
   }
   .container-top .navbar {
@@ -621,7 +692,7 @@ body a {
     display: flex;
   }
   .container-top .animation .grasslist .grassitem img {
-    width: 117px;
+    max-width: 117px;
     height: 117px;
   }
   .container-top .ourservice {
@@ -636,7 +707,7 @@ body a {
     font-weight: 900;
   }
   .container-top .ourservice .service-title .mb-h3 {
-    width: 351px;
+    max-width: 351px;
     font-weight: 900;
   }
   .container-top .ourservice .service-cardlist {
@@ -645,7 +716,7 @@ body a {
     gap: 12px;
   }
   .container-top .ourservice .service-cardlist .service-card {
-    width: 309px;
+    max-width: 309px;
     padding: 40px 20px;
   }
   .container-top .partner .logolist {
@@ -653,8 +724,11 @@ body a {
     margin: 24px 0 48px 0;
     gap: 12px;
   }
-  .container-top .partner .logolist .logogroup {
-    overflow: hidden;
+  .container-top .partner .logolist .logogroup.logogroup-top {
+    animation: carousel 10s linear infinite;
+  }
+  .container-top .partner .logolist .logogroup.logogroup-bottom {
+    animation: carousel-reverse 10s linear infinite;
   }
   .container-top .partner .testimoniallist {
     flex-direction: column;
@@ -671,20 +745,18 @@ body a {
     text-align: center;
     padding: 0 30px;
   }
-  .container-mid .container-mid-content .searchbar {
-    max-width: 271px;
-  }
   .container-mid .container-mid-content .filter {
     flex-wrap: wrap;
     margin-bottom: 48px;
   }
   .container-mid .container-mid-content .filter .filterlist {
+    overflow-x: auto;
     margin: 24px 0 48px 0;
-    overflow: hidden;
     order: 2;
+    gap: 10px;
   }
   .container-mid .container-mid-content .filter .filterlist .filteritem {
-    display: block;
+    display: inline-block;
   }
   .container-mid .container-mid-content .cardlist {
     flex-direction: column;
@@ -723,6 +795,19 @@ body a {
     order: 2;
   }
 }
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 192px 107px;
+}
+
+.container-bottom .footer .footermenu-bottom .menu-backtotop {
+  display: none;
+}
+
 * {
   font-family: "Noto Sans TC, sans-serif";
 }
@@ -883,6 +968,11 @@ body {
   font-weight: 900;
   margin-bottom: 12px;
 }
+.container-top .pricing .pricing-card-list .pricing-card .pricing-content .description-list .desctiption {
+  color: #f2f2f2;
+  list-style-type: disc;
+  margin-left: 32px;
+}
 .container-top .pricing .pricing-card-list .pricing-card .pricing-card-plan {
   padding: 20px 32px;
   display: flex;
@@ -1011,6 +1101,7 @@ body {
 body a {
   text-decoration: none;
   color: #ffffff;
+  display: inline-block;
 }
 
 .container-top {
@@ -1018,13 +1109,19 @@ body a {
   margin: 0 auto;
 }
 .container-top .navbar {
-  height: 80px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ffffff;
   align-items: center;
 }
-.container-top .navbar .logo img {
+.container-top .navbar .logo {
+  height: 40px;
+}
+.container-top .navbar .logo a {
+  display: contents;
+}
+.container-top .navbar .logo a img {
   height: 40px;
 }
 .container-top .navbar .menulist {
@@ -1064,6 +1161,33 @@ body a {
   display: flex;
   justify-content: flex-end;
 }
+.container-top .animation .grasslist .grassitem {
+  overflow: hidden;
+}
+.container-top .animation .grasslist .grassitem img {
+  position: relative;
+  animation: slide-up 3.5s ease-in-out infinite;
+}
+.container-top .animation .grasslist .grassitem .grass1 {
+  animation-delay: 0.5s;
+}
+.container-top .animation .grasslist .grassitem .grass2 {
+  animation-delay: 0.25s;
+}
+.container-top .animation .grasslist .grassitem .grass3 {
+  animation-delay: 0s;
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 .container-top .ourservice {
   margin: 160px 0;
 }
@@ -1073,10 +1197,10 @@ body a {
   margin-bottom: 80px;
 }
 .container-top .ourservice .service-title .h3 {
-  width: 414px;
+  font-weight: 900;
 }
 .container-top .ourservice .service-title .h1 {
-  width: 856px;
+  max-width: 856px;
   font-weight: 900;
 }
 .container-top .ourservice .service-cardlist {
@@ -1085,7 +1209,7 @@ body a {
   gap: 24px;
 }
 .container-top .ourservice .service-cardlist .service-card {
-  width: 416px;
+  max-width: 416px;
   border: 1px solid #525252;
   border-radius: 16px;
   padding: 80px 40px;
@@ -1103,22 +1227,44 @@ body a {
   font-weight: 900;
 }
 .container-top .partner .logolist {
-  height: 80px;
   margin: 80px 0 160px 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   gap: 20px;
+  background-image: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, rgb(0, 0, 0) 100%);
 }
 .container-top .partner .logolist .logogroup {
-  height: 40px;
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
+.container-top .partner .logolist .logogroup.logogroup-top {
+  animation: carousel 20s linear infinite;
+}
+.container-top .partner .logolist .logogroup.logogroup-bottom {
+  animation: carousel-reverse 20s linear infinite;
+}
 .container-top .partner .logolist .logogroup .logo img {
-  max-width: initial;
-  width: 160px;
+  position: relative;
+  z-index: -1;
+  max-width: 160px;
   height: 40px;
+}
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes carousel-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .container-top .partner .testimoniallist {
   display: flex;
@@ -1173,7 +1319,6 @@ body a {
 }
 .container-mid .container-mid-content .searchbar {
   background-color: #f2f2f2;
-  max-width: 1296px;
   display: flex;
   align-items: center;
   border-radius: 16px;
@@ -1183,9 +1328,21 @@ body a {
   color: #919191;
   margin-right: 15.51px;
 }
-.container-mid .container-mid-content .searchbar .body {
+.container-mid .container-mid-content .searchbar input {
+  width: 100%;
+  padding: 8px;
+  background-color: #f2f2f2;
   border: none;
   color: #919191;
+}
+.container-mid .container-mid-content .searchbar input:focus::-moz-placeholder {
+  color: transparent;
+}
+.container-mid .container-mid-content .searchbar input:focus::placeholder {
+  color: transparent;
+}
+.container-mid .container-mid-content .searchbar input:focus-visible {
+  outline: none;
 }
 .container-mid .container-mid-content .filter {
   margin-top: 24px;
@@ -1213,9 +1370,10 @@ body a {
   display: flex;
   align-items: center;
   gap: 8px;
+  overflow: hidden;
 }
 .container-mid .container-mid-content .filter .filterlist .filteritem {
-  display: block;
+  display: inline-block;
   padding: 8px 16px;
   text-align: center;
   border-radius: 16px;
@@ -1318,7 +1476,7 @@ body a {
 }
 .container-mid .container-mid-content .pagination {
   float: right;
-  width: 308px;
+  max-width: 308px;
   display: flex;
   justify-content: space-between;
   gap: 4px;
@@ -1333,18 +1491,14 @@ body a {
   border-radius: 16px;
 }
 .container-mid .container-mid-content .pagination .pageitem:hover {
+  color: #ffffff;
   background-color: #020202;
 }
-.container-mid .container-mid-content .pagination .pageitem:hover a {
+.container-mid .container-mid-content .pagination .pageitem:hover > .small {
   color: #ffffff;
 }
 .container-mid .container-mid-content .pagination .pageitem:hover .material-icons {
   color: #ffffff;
-}
-.container-mid .container-mid-content .pagination .pageitem a {
-  font-weight: 700;
-  text-align: center;
-  color: #020202;
 }
 .container-mid .container-mid-content .pagination .pageitem .material-icons {
   display: flex;
@@ -1353,6 +1507,11 @@ body a {
   color: #020202;
   height: 48px;
   width: 48px;
+}
+.container-mid .container-mid-content .pagination .small {
+  font-weight: 700;
+  text-align: center;
+  color: #020202;
 }
 
 .container-bottom {
@@ -1397,6 +1556,7 @@ body a {
   height: 40px;
 }
 .container-bottom .footer .footermenu-bottom {
+  width: 100%;
   border-top: 1px solid #ffffff;
   height: 88px;
   display: flex;
@@ -1423,13 +1583,14 @@ body a {
   align-items: center;
   gap: 12px;
 }
-.container-bottom .footer .footermenu-bottom a .backtotop {
+.container-bottom .footer .footermenu-bottom a .body {
   font-weight: 700;
   color: #ffffff;
 }
 
 @media (max-width: 767px) {
   .container-top {
+    max-width: 743px;
     padding: 0 12px;
   }
   .container-top .navbar {
@@ -1453,7 +1614,7 @@ body a {
     display: flex;
   }
   .container-top .animation .grasslist .grassitem img {
-    width: 117px;
+    max-width: 117px;
     height: 117px;
   }
   .container-top .ourservice {
@@ -1468,7 +1629,7 @@ body a {
     font-weight: 900;
   }
   .container-top .ourservice .service-title .mb-h3 {
-    width: 351px;
+    max-width: 351px;
     font-weight: 900;
   }
   .container-top .ourservice .service-cardlist {
@@ -1477,7 +1638,7 @@ body a {
     gap: 12px;
   }
   .container-top .ourservice .service-cardlist .service-card {
-    width: 309px;
+    max-width: 309px;
     padding: 40px 20px;
   }
   .container-top .partner .logolist {
@@ -1485,8 +1646,11 @@ body a {
     margin: 24px 0 48px 0;
     gap: 12px;
   }
-  .container-top .partner .logolist .logogroup {
-    overflow: hidden;
+  .container-top .partner .logolist .logogroup.logogroup-top {
+    animation: carousel 10s linear infinite;
+  }
+  .container-top .partner .logolist .logogroup.logogroup-bottom {
+    animation: carousel-reverse 10s linear infinite;
   }
   .container-top .partner .testimoniallist {
     flex-direction: column;
@@ -1503,20 +1667,18 @@ body a {
     text-align: center;
     padding: 0 30px;
   }
-  .container-mid .container-mid-content .searchbar {
-    max-width: 271px;
-  }
   .container-mid .container-mid-content .filter {
     flex-wrap: wrap;
     margin-bottom: 48px;
   }
   .container-mid .container-mid-content .filter .filterlist {
+    overflow-x: auto;
     margin: 24px 0 48px 0;
-    overflow: hidden;
     order: 2;
+    gap: 10px;
   }
   .container-mid .container-mid-content .filter .filterlist .filteritem {
-    display: block;
+    display: inline-block;
   }
   .container-mid .container-mid-content .cardlist {
     flex-direction: column;
@@ -1554,16 +1716,4 @@ body a {
   .container-bottom .footer .footermenu-bottom .socialmediamenu {
     order: 2;
   }
-}
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding: 192px 107px;
-}
-
-.container-bottom .footer .footermenu-bottom .menu-backtotop {
-  display: none;
 }/*# sourceMappingURL=all.css.map */

@@ -40,6 +40,13 @@ body{
                         font-weight: 900;
                         margin-bottom: 12px;
                     }
+                    .description-list{
+                        .desctiption{
+                            color: $black-20;
+                            list-style-type: disc;
+                            margin-left: 32px;
+                        }
+                    }
                 }
                 .pricing-card-plan{
                     padding: 20px 32px;
