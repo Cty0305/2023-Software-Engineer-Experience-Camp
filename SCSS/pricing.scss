@@ -1,4 +1,4 @@
-@import "variable";
+
 body{
     box-sizing: border-box;
 }
@@ -12,9 +12,41 @@ body{
             margin-bottom: 238px;
         }
     }
-    .animation{
-            justify-content: start;
+    .animation-price{
+        display: block;
+            justify-content: flex-start;
+            .grasslist{
+                .grassitem{
+                    overflow: hidden;
+                    img{
+                        position: relative; 
+                        animation: slide-up 3.5s ease-in-out infinite;
+                    }
+                    .grass1 {
+                        animation-delay: 0.5s;
+                    }
+                    
+                    .grass2 {
+                        animation-delay: 0.25s;
+                    }
+                    
+                    .grass3 {
+                        animation-delay: 0s;
+                    }
+                }
+            }
     }
+    @keyframes slide-up {
+        0% {
+          transform: translateY(100%);
+        }
+        50%{
+            transform: translateY(0%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
     .pricing{
         margin: 160px 0;
         .h3{
@@ -115,10 +147,10 @@ body{
                 display: flex;
                 flex-direction: column;
                 gap:16px;
+                width: 66%;
                 .faq-item{
                     display: flex;
                     gap:20px;
-                    width: 856px;
                     padding: 20px 40px;
                     border: 1px solid $black-80;
                     border-radius: 16px;
@@ -175,8 +207,8 @@ body{
                 margin-bottom: 24px;
             }
             .faq-list{
+                width: 100%;
                 .faq-item{
-                    max-width: 311px;
                     padding: 20px;
                 }
             }

@@ -1,5 +1,7 @@
-body{
+*, *::before, *::after{
     box-sizing: border-box;
+}
+body{
     background-color:$black-100;
     color:$black-0;
     font-weight: $regular;
@@ -185,6 +187,7 @@ body{
             justify-content: center;
             gap: 24px;
             .testimonialcard{
+                width: (100% / 3);
                 background: #FFFFFF14;
                 border-radius: 16px;
                 display: flex;
@@ -557,7 +560,7 @@ body{
                 flex-direction: column;
                 gap:12px;
                 .service-card{
-                    max-width: 309px;
+                    width: 100%;
                     padding: 40px 20px;
                 }
             }
@@ -578,6 +581,9 @@ body{
             }
             .testimoniallist{
                 flex-direction: column;
+                .testimonialcard{
+                    width: 100%;
+                }
             }
         }
     }
