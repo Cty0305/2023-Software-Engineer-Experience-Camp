@@ -292,6 +292,9 @@ body{
                     font-size: 16px;
                 }
             }
+            .filter-sign.clicked{
+                border: 1px solid $black-100;
+            }
             .filterlist{
                 display: flex;
                 align-items: center;

@@ -158,15 +158,33 @@ body{
                     padding: 20px 40px;
                     border: 1px solid $black-80;
                     border-radius: 16px;
-                    .question{
-                        font-weight: 900;
-                    }
-                    .answer{
-                        display: none;
+                    transition:all 300ms ease-in-out;
+                    .faq-text{
+                        .question{
+                            font-weight: 900;
+                        }
+                        .answer{
+                            display: none;
+                        }
                     }
                     &:hover{
                         cursor: pointer;
                         border: 1px solid $black-0;
+                    }
+                }
+                .faq-item.clicked{
+                    border: 1px solid $black-0;
+                    border-radius: 16px;
+                    padding: 20px 40px; 
+                    display: flex;
+                    gap:20px;
+                    .faq-text{
+                        .question{
+                            margin-bottom: 16px;
+                        }
+                        .answer{
+                            display: block;
+                        }
                     }
                 }
             }
