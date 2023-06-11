@@ -121,7 +121,7 @@ body{
             justify-content: space-between;
             gap: 24px;
             .service-card{
-                max-width: 416px;
+                width: calc(100%/3);
                 border:1px solid $black-80;
                 border-radius: 16px;
                 padding: 80px 40px;
@@ -187,20 +187,24 @@ body{
             justify-content: center;
             gap: 24px;
             .testimonialcard{
-                width: (100% / 3);
+                width: calc(100% / 3);
                 background: #FFFFFF14;
                 border-radius: 16px;
                 display: flex;
                 flex-direction: column;
                 padding: 40px;
-                gap: 20px;
-                .material-icons{
-                    font-size: 16px;
+                .stargroup{
+                    margin-bottom: 20px;
+                    .material-icons{
+                        font-size: 16px;
+                    }
                 }
                 }
-                .body{
-                    height: 215px;
+                .quote{
+                    overflow: hidden;
                     color: $black-20;
+                    max-height: 215px;
+                    margin-bottom: 20px;
                 }
                 .customer{
                     display: flex;
@@ -223,6 +227,7 @@ body{
 
 .container-mid{
     max-width: 1920px;
+    margin: 0 auto;
     background-color: $black-0;
     border-radius: 160px;
     padding: 160px 12px;
@@ -334,6 +339,7 @@ body{
                     height: 312px;
                     overflow: hidden;
                     img{
+                        width: 100%;
                         object-fit: contain;
                         transition:all 0.3s ease-out;
                         overflow:hidden;
@@ -476,37 +482,45 @@ body{
         .footermenu-bottom{
             width: 100%;
             border-top: 1px solid $black-0;
-            height: 88px;
             display: flex;
             align-items: center;
-            .privacy-policy{
-                color: $black-0;
-                font-weight: 700;
-                margin-right: 100px;
-            }
-            .socialmediamenu{
-                display: flex;
-                justify-content: space-between;
-                gap:20px;
-                margin-right: 702px;
-                .socialmedia-item{
-                    font-weight: 700;
+            padding: 20px 0;
+                .privacy-policy{
+                    min-width: 125px;
                     color: $black-0;
+                    font-weight: 700;
+                    padding: 12px 0;
+                    margin-right: 100px;
+                }
+                .socialmediamenu{
+                    display: flex;
+                    justify-content: space-between;
+                    gap:20px;
+                    .socialmedia-item{
+                        font-weight: 700;
+                        color: $black-0;
+                        a{
+                            padding: 12px 0;
+                            display: block;
+                        }
+                    }
                 }
             }
-            a{
-                display: flex;
-                padding: 12px 0;
-                align-items: center;
-                gap:12px;
-                .body{
+                .backtotop{
+                    margin-left: auto;
+                    cursor: pointer;
+                    min-width: 126px;
+                    display: flex;
+                    padding: 12px 0;
+                    align-items: center;
+                    gap:12px;
                     font-weight: 700;
                     color: $black-0;
                 }
             }
         }
-    }
-}
+    
+
 
 @media(max-width:767px){
     .container-top{
@@ -567,7 +581,7 @@ body{
         }
         .partner{
             .logolist{
-                max-width: 375px;
+                max-width: 100%;
                 margin: 24px 0 48px 0;
                 gap:12px;
                 .logogroup{
@@ -580,9 +594,16 @@ body{
                 }
             }
             .testimoniallist{
-                flex-direction: column;
+                white-space: nowrap;
+                overflow-x: auto;
+                justify-content: unset;
                 .testimonialcard{
-                    width: 100%;
+                    padding: 20px;
+                    min-width: 100%;
+                    .quote{
+                        min-height: 144px;
+                        white-space: normal;
+                    }    
                 }
             }
         }
@@ -591,7 +612,7 @@ body{
         border-radius: 20px;
         padding: 80px 12px;
         .container-mid-content{
-            max-width: 351px;
+            max-width: 100%;
             .mb-h3{
                 margin-bottom: 32px;
                 text-align: center;
@@ -602,7 +623,7 @@ body{
                 margin-bottom: 48px;
                 .filterlist{
                     overflow-x: auto;
-                    margin: 24px 0 48px 0;
+                    margin: 24px auto 48px auto;
                     order:2;
                     gap:10px;
                     .filteritem{
@@ -638,16 +659,22 @@ body{
                 gap:40px;
             }
             .footermenu-bottom{
-                padding: 20px 0;
+                padding: 20px 0 8px 0;
                 flex-wrap: wrap;
+                align-items: center;
                 .privacy-policy{
                     position: relative;                    
                     display: inline;
+                    margin-bottom: 12px;
                 }
                 .socialmediamenu{
                     order: 2;
+                    margin-bottom: 12px;
                 }
-            }
+                .backtotop{
+                    margin-bottom: 12px;
+                }
+                }
         }
     }
 }

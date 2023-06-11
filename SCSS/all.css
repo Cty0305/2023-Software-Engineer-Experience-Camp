@@ -290,7 +290,7 @@ body a {
   gap: 24px;
 }
 .container-top .ourservice .service-cardlist .service-card {
-  max-width: 416px;
+  width: 33.3333333333%;
   border: 1px solid #525252;
   border-radius: 16px;
   padding: 80px 40px;
@@ -359,14 +359,18 @@ body a {
   display: flex;
   flex-direction: column;
   padding: 40px;
-  gap: 20px;
 }
-.container-top .partner .testimoniallist .testimonialcard .material-icons {
+.container-top .partner .testimoniallist .testimonialcard .stargroup {
+  margin-bottom: 20px;
+}
+.container-top .partner .testimoniallist .testimonialcard .stargroup .material-icons {
   font-size: 16px;
 }
-.container-top .partner .testimoniallist .body {
-  height: 215px;
+.container-top .partner .testimoniallist .quote {
+  overflow: hidden;
   color: #f2f2f2;
+  max-height: 215px;
+  margin-bottom: 20px;
 }
 .container-top .partner .testimoniallist .customer {
   display: flex;
@@ -385,6 +389,7 @@ body a {
 
 .container-mid {
   max-width: 1920px;
+  margin: 0 auto;
   background-color: #ffffff;
   border-radius: 160px;
   padding: 160px 12px;
@@ -504,6 +509,7 @@ body a {
   overflow: hidden;
 }
 .container-mid .container-mid-content .cardlist .card .card-img img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   transition: all 0.3s ease-out;
@@ -640,32 +646,38 @@ body a {
 .container-bottom .footer .footermenu-bottom {
   width: 100%;
   border-top: 1px solid #ffffff;
-  height: 88px;
   display: flex;
   align-items: center;
+  padding: 20px 0;
 }
 .container-bottom .footer .footermenu-bottom .privacy-policy {
+  min-width: 125px;
   color: #ffffff;
   font-weight: 700;
+  padding: 12px 0;
   margin-right: 100px;
 }
 .container-bottom .footer .footermenu-bottom .socialmediamenu {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  margin-right: 702px;
 }
 .container-bottom .footer .footermenu-bottom .socialmediamenu .socialmedia-item {
   font-weight: 700;
   color: #ffffff;
 }
-.container-bottom .footer .footermenu-bottom a {
+.container-bottom .footer .footermenu-bottom .socialmediamenu .socialmedia-item a {
+  padding: 12px 0;
+  display: block;
+}
+.container-bottom .footer .backtotop {
+  margin-left: auto;
+  cursor: pointer;
+  min-width: 126px;
   display: flex;
   padding: 12px 0;
   align-items: center;
   gap: 12px;
-}
-.container-bottom .footer .footermenu-bottom a .body {
   font-weight: 700;
   color: #ffffff;
 }
@@ -724,7 +736,7 @@ body a {
     padding: 40px 20px;
   }
   .container-top .partner .logolist {
-    max-width: 375px;
+    max-width: 100%;
     margin: 24px 0 48px 0;
     gap: 12px;
   }
@@ -735,17 +747,24 @@ body a {
     animation: carousel-reverse 10s linear infinite;
   }
   .container-top .partner .testimoniallist {
-    flex-direction: column;
+    white-space: nowrap;
+    overflow-x: auto;
+    justify-content: unset;
   }
   .container-top .partner .testimoniallist .testimonialcard {
-    width: 100%;
+    padding: 20px;
+    min-width: 100%;
+  }
+  .container-top .partner .testimoniallist .testimonialcard .quote {
+    min-height: 144px;
+    white-space: normal;
   }
   .container-mid {
     border-radius: 20px;
     padding: 80px 12px;
   }
   .container-mid .container-mid-content {
-    max-width: 351px;
+    max-width: 100%;
   }
   .container-mid .container-mid-content .mb-h3 {
     margin-bottom: 32px;
@@ -758,7 +777,7 @@ body a {
   }
   .container-mid .container-mid-content .filter .filterlist {
     overflow-x: auto;
-    margin: 24px 0 48px 0;
+    margin: 24px auto 48px auto;
     order: 2;
     gap: 10px;
   }
@@ -791,15 +810,21 @@ body a {
     gap: 40px;
   }
   .container-bottom .footer .footermenu-bottom {
-    padding: 20px 0;
+    padding: 20px 0 8px 0;
     flex-wrap: wrap;
+    align-items: center;
   }
   .container-bottom .footer .footermenu-bottom .privacy-policy {
     position: relative;
     display: inline;
+    margin-bottom: 12px;
   }
   .container-bottom .footer .footermenu-bottom .socialmediamenu {
     order: 2;
+    margin-bottom: 12px;
+  }
+  .container-bottom .footer .footermenu-bottom .backtotop {
+    margin-bottom: 12px;
   }
 }
 body {
@@ -861,6 +886,10 @@ body {
   border: 1px solid #525252;
   border-radius: 16px;
   width: 634px;
+}
+.container-top .pricing .pricing-card-list .pricing-card:hover {
+  cursor: pointer;
+  border: 1px solid #ffffff;
 }
 .container-top .pricing .pricing-card-list .pricing-card .pricing-content {
   padding: 20px 32px;
@@ -950,8 +979,15 @@ body {
   border: 1px solid #525252;
   border-radius: 16px;
 }
-.container-bottom .faq .faq-content .faq-list .faq-item .h6 {
+.container-bottom .faq .faq-content .faq-list .faq-item .question {
   font-weight: 900;
+}
+.container-bottom .faq .faq-content .faq-list .faq-item .answer {
+  display: none;
+}
+.container-bottom .faq .faq-content .faq-list .faq-item:hover {
+  cursor: pointer;
+  border: 1px solid #ffffff;
 }
 
 @media (max-width: 767px) {
@@ -961,12 +997,22 @@ body {
   .container-top .kv .h1 {
     margin: 0 0 258px 94px;
   }
+  .container-top .animation-price .grasslist .grassitem {
+    display: flex;
+  }
+  .container-top .animation-price .grasslist .grassitem img {
+    max-width: 117px;
+    height: 117px;
+  }
   .container-top .pricing {
     margin: 120px 0;
   }
   .container-top .pricing .mb-h6 {
     font-weight: 900;
     margin-bottom: 24px;
+  }
+  .container-top .pricing .pricing-card-list .pricing-card {
+    width: 100%;
   }
   .container-top .pricing .pricing-card-list .pricing-card .pricing-content {
     padding: 20px;

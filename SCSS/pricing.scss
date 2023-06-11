@@ -62,6 +62,10 @@ body{
                 border: 1px solid $black-80;
                 border-radius: 16px;
                 width: 634px;
+                &:hover{
+                    cursor:pointer;
+                    border: 1px solid $black-0;
+                }
                 .pricing-content{
                     padding: 20px 32px;
                     display: flex;
@@ -154,8 +158,15 @@ body{
                     padding: 20px 40px;
                     border: 1px solid $black-80;
                     border-radius: 16px;
-                    .h6{
+                    .question{
                         font-weight: 900;
+                    }
+                    .answer{
+                        display: none;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        border: 1px solid $black-0;
                     }
                 }
             }
@@ -173,6 +184,18 @@ body{
                 margin: 0 0 258px 94px;
             }
         }
+        .animation-price{
+            .grasslist{
+                .grassitem{
+                    display: flex;
+                    img{
+                        max-width: 117px;
+                        height: 117px;
+                    }
+                }
+                
+            }
+        }
         .pricing{
             margin: 120px 0;
             .mb-h6{
@@ -181,6 +204,7 @@ body{
             }
             .pricing-card-list{
                 .pricing-card{
+                    width: 100%;
                     .pricing-content{
                         padding: 20px;
                         height: 176px;
