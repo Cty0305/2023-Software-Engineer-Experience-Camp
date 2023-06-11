@@ -6,6 +6,10 @@ body{
     color:$black-0;
     font-weight: $regular;
     font-family: $font-family;
+    button{
+        background-color: $black-0;
+        cursor: pointer;
+    }
     a{
         text-decoration: none;
         color:$black-0;
@@ -182,47 +186,49 @@ body{
             transform: translateX(0);
         }    
     }
-        .testimoniallist{
+    
+    
+    .testimoniallist{
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        .testimonialcard{
+            width: calc(100% / 3);
+            background: #FFFFFF14;
+            border-radius: 16px;
             display: flex;
-            justify-content: center;
-            gap: 24px;
-            .testimonialcard{
-                width: calc(100% / 3);
-                background: #FFFFFF14;
-                border-radius: 16px;
+            flex-direction: column;
+            padding: 40px;
+            .stargroup{
+                margin-bottom: 20px;
+                .material-icons{
+                    font-size: 16px;
+                }
+            }
+            }
+            .quote{
+                overflow: hidden;
+                color: $black-20;
+                max-height: 215px;
+                margin-bottom: 20px;
+            }
+            .customer{
                 display: flex;
-                flex-direction: column;
-                padding: 40px;
-                .stargroup{
-                    margin-bottom: 20px;
-                    .material-icons{
-                        font-size: 16px;
+                align-items: center;
+                img{
+                    margin-right: 16px;               
+                }
+                .profile{
+                    gap:4px;
+                    .body{
+                        height: auto;
+                        margin-bottom: 4px;
                     }
-                }
-                }
-                .quote{
-                    overflow: hidden;
-                    color: $black-20;
-                    max-height: 215px;
-                    margin-bottom: 20px;
-                }
-                .customer{
-                    display: flex;
-                    align-items: center;
-                    img{
-                        margin-right: 16px;               
-                    }
-                    .profile{
-                        gap:4px;
-                        .body{
-                            height: auto;
-                            margin-bottom: 4px;
-                        }
-                    }                
-                }
+                }                
             }
         }
     }
+}
 
 
 .container-mid{
@@ -276,6 +282,7 @@ body{
                 display: flex;
                 align-items: center;
                 gap: 12px;
+                cursor: pointer;
                 .body{
                     color: $black-100;
                     font-weight: $regular;
@@ -336,7 +343,6 @@ body{
                 margin-bottom: 24px;
                 overflow: hidden;
                 .card-img{
-                    height: 312px;
                     overflow: hidden;
                     img{
                         width: 100%;
@@ -520,7 +526,6 @@ body{
             }
         }
     
-
 
 @media(max-width:767px){
     .container-top{

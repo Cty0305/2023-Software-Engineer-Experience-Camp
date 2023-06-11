@@ -179,6 +179,10 @@ body {
   font-weight: 400;
   font-family: "Noto Sans TC, sans-serif";
 }
+body button {
+  background-color: #ffffff;
+  cursor: pointer;
+}
 body a {
   text-decoration: none;
   color: #ffffff;
@@ -444,6 +448,7 @@ body a {
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
 }
 .container-mid .container-mid-content .filter .filter-sign .body {
   color: #020202;
@@ -505,7 +510,6 @@ body a {
   overflow: hidden;
 }
 .container-mid .container-mid-content .cardlist .card .card-img {
-  height: 312px;
   overflow: hidden;
 }
 .container-mid .container-mid-content .cardlist .card .card-img img {
