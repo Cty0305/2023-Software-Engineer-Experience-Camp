@@ -348,10 +348,8 @@ body{
                 .card-img{
                     overflow: hidden;
                     img{
-                        width: 100%;
-                        object-fit: contain;
+                        display: block;
                         transition:all 0.3s ease-out;
-                        overflow:hidden;
                         &:hover{
                             transform:scale(1.2);
                             transition:all 0.3s ease-in;
