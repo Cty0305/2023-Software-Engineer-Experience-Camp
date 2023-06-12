@@ -239,6 +239,10 @@ body a {
   border-radius: 16px;
   padding: 20px 40px;
 }
+.container-top .kv a:hover {
+  background-color: #ffffff;
+  color: #020202;
+}
 .container-top .kv a .h6 {
   font-weight: 900;
 }
@@ -628,6 +632,13 @@ body a {
   padding: 20px 32px 20px 40px;
   gap: 16px;
   border-radius: 16px;
+}
+.container-bottom .contactus a:hover {
+  background-color: #ffffff;
+  color: #020202;
+}
+.container-bottom .contactus a .h6 {
+  font-weight: 900;
 }
 .container-bottom .footer .footermenu-top {
   border-top: 1px solid #ffffff;
