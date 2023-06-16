@@ -1,5 +1,3 @@
-$font-family: "Noto Sans TC, sans-serif";
-
 
 // font-weight
 $regular:400;
@@ -14,12 +12,9 @@ $black-0: #ffffff;
 $primary: #f18724;
 $surface: #f2efe7;
 
-// all
-*{
-    font-family: $font-family;
-}
-
 // Typography
+$font-family: "Noto Sans TC", sans-serif;
+
 .d1,.d2,.d3,.h1,.h2,.h3,.h4,.h5,.h6{
     font-weight: 900;
     line-height: 1.2;
@@ -72,19 +67,19 @@ $surface: #f2efe7;
 .body{
     font-size: 1rem;
     font-weight: $regular;
-    line-height: 24px;
+    line-height: 1.5;
 }
 
 .small{
     font-size: 0.875rem;
     font-weight: $regular;
-    line-height: 21px;
+    line-height: 1.3;
 }
 
 .tiny{
     font-size: 0.75rem;
     font-weight: $regular;
-    line-height: 18px;
+    line-height: 1.1;
 }
 
 @media(max-width:768px){
@@ -125,19 +120,19 @@ $surface: #f2efe7;
     .mb-body{
         font-size: 1rem;
         font-weight: $regular;
-        line-height: 24px;
+        line-height: 1.5;
     }
     
     .mb-small{
         font-size: 0.875rem;
         font-weight: $regular;
-        line-height: 21px;
+        line-height: 1.3;
     }
     
     .mb-tiny{
         font-size: 0.75rem;
         font-weight: $regular;
-        line-height: 18px;
+        line-height: 1.1;
     }
 }
 

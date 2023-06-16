@@ -1,4 +1,6 @@
+
 .menu{
+    height: 70vh;    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,7 +8,6 @@
     gap:8px;
     padding: 192px 107px;
 }
-
 .container-bottom .footer .footermenu-bottom .menu-backtotop{
     display: none;
 }

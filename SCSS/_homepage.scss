@@ -4,7 +4,6 @@
 body{
     background-color:$black-100;
     color:$black-0;
-    font-weight: $regular;
     font-family: $font-family;
     button{
         background-color: $black-0;
@@ -18,7 +17,8 @@ body{
 }
 
 .container-top{
-    max-width: 1296px;
+    max-width: 1326px;
+    padding: 0 15px;
     margin: 0 auto;
 
     .navbar{
@@ -78,8 +78,8 @@ body{
     .animation{
         display: flex;
         justify-content: flex-end;
-        .grasslist{
-            .grassitem{
+        .grass-list{
+            .grass-item{
                 overflow: hidden;
                 img{
                     position: relative; 
@@ -110,7 +110,7 @@ body{
           transform: translateY(-100%);
         }
       }
-    .ourservice{
+    .our-service{
         margin: 160px 0;
         .service-title{
             display: flex;
@@ -124,7 +124,7 @@ body{
                 font-weight: $bold;
             }
         }
-        .service-cardlist{
+        .service-card-list{
             display: flex;
             justify-content: space-between;
             gap: 24px;
@@ -145,23 +145,33 @@ body{
     }
     .partner{
         margin-bottom: 160px;
+        position: relative;
         .h3{
             font-weight: 900;
         }
-        .logolist{
+        .logo-list{
+            // position: absolute;
             margin: 80px 0 160px 0;
             display: flex;            
             flex-direction: column;
             overflow: hidden;
             gap:20px;
-            background-image:linear-gradient(90deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 15%,rgba(0,0,0,0) 85%,rgba(0,0,0,1) 100%);
-            .logogroup{
+            // top:0;
+            // &::before{
+            //     background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
+            //     left: 0;
+            // }
+            // &::after {
+            //     background: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
+            //     right: 0;
+            // }
+            .logo-group{
                 display: flex;            
                 gap:20px;
-            &.logogroup-top{
+            &.logo-group-top{
                 animation: carousel 20s linear infinite;
             }
-            &.logogroup-bottom{
+            &.logo-group-bottom{
                 animation: carousel-reverse 20s linear infinite;
             }
             .logo{
@@ -192,11 +202,11 @@ body{
     }
     
     
-    .testimoniallist{
+    .testimonial-list{
         display: flex;
         justify-content: center;
         gap: 24px;
-        .testimonialcard{
+        .testimonial-card{
             width: calc(100% / 3);
             background: #FFFFFF14;
             border-radius: 16px;
@@ -286,6 +296,9 @@ body{
                 display: flex;
                 align-items: center;
                 gap: 12px;
+                &:hover{
+                    border: 1px solid $black-100;
+                }
                 cursor: pointer;
                 .body{
                     color: $black-100;
@@ -296,15 +309,12 @@ body{
                     font-size: 16px;
                 }
             }
-            .filter-sign.clicked{
-                border: 1px solid $black-100;
-            }
-            .filterlist{
+            .filter-list{
                 display: flex;
                 align-items: center;
                 gap: 8px;
                 overflow: hidden;
-                .filteritem{
+                .filter-item{
                     display: inline-block;
                     padding: 8px 16px;
                     text-align: center;
@@ -322,7 +332,7 @@ body{
                     }
                 }
             }
-            .filterselector{
+            .filter-selector{
                 border: 1px solid $black-20;
                 border-radius: 16px;
                 text-align: center;
@@ -330,6 +340,9 @@ body{
                 display: flex;
                 align-items: center;
                 gap:12px;
+                &:hover{
+                    border: 1px solid $black-100;
+                }
                 .body{
                     color: $black-100;
                 }
@@ -338,7 +351,7 @@ body{
                 }
             }
         }
-        .cardlist{
+        .card-list{
             margin: 40px 0;
             display: flex;
             justify-content: space-between;
@@ -448,7 +461,8 @@ body{
     }
 }
 .container-bottom{
-    max-width: 1296px;
+    max-width: 1326px;
+    padding: 0 15px;
     margin: 0 auto;
     .contactus{
         display: flex;
@@ -510,7 +524,7 @@ body{
                     padding: 12px 0;
                     margin-right: 100px;
                 }
-                .socialmediamenu{
+                .socialmedia-menu{
                     display: flex;
                     justify-content: space-between;
                     gap:20px;
@@ -561,8 +575,8 @@ body{
             }
         }
         .animation{
-            .grasslist{
-                .grassitem{
+            .grass-list{
+                .grass-item{
                     display: flex;
                     img{
                         max-width: 117px;
@@ -572,7 +586,7 @@ body{
                 
             }
         }
-        .ourservice{
+        .our-service{
             margin: 120px 0;
             .service-title{
                 display: flex;
@@ -586,7 +600,7 @@ body{
                     font-weight: 900;
                 }
             }
-            .service-cardlist{
+            .service-card-list{
                 display: flex;
                 flex-direction: column;
                 gap:12px;
@@ -597,24 +611,24 @@ body{
             }
         }
         .partner{
-            .logolist{
+            .logo-list{
                 max-width: 100%;
                 margin: 24px 0 48px 0;
                 gap:12px;
-                .logogroup{
-                    &.logogroup-top{
+                .logo-group{
+                    &.logo-group-top{
                         animation:carousel 10s linear infinite;
                     }
-                    &.logogroup-bottom{
+                    &.logo-group-bottom{
                         animation:carousel-reverse 10s linear infinite;
                     }
                 }
             }
-            .testimoniallist{
+            .testimonial-list{
                 white-space: nowrap;
                 overflow-x: auto;
                 justify-content: unset;
-                .testimonialcard{
+                .testimonial-card{
                     padding: 20px;
                     min-width: 100%;
                     .quote{
@@ -638,17 +652,17 @@ body{
             .filter{
                 flex-wrap:wrap;
                 margin-bottom: 48px;
-                .filterlist{
+                .filter-list{
                     overflow-x: auto;
                     margin: 24px auto 48px auto;
                     order:2;
                     gap:10px;
-                    .filteritem{
+                    .filter-item{
                         display: inline-block;
                     }
                 }
             }
-            .cardlist{
+            .card-list{
                 flex-direction: column;
                 gap:12px;
                 padding: 48px 0 32px 0;
@@ -684,7 +698,7 @@ body{
                     display: inline;
                     margin-bottom: 12px;
                 }
-                .socialmediamenu{
+                .socialmedia-menu{
                     order: 2;
                     margin-bottom: 12px;
                 }
