@@ -172,11 +172,16 @@
                     <a href="" class="filter-item"><li class="body">客服</li></a>
                     <a href="" class="filter-item"><li class="body">生產力</li></a>
                 </ul>
-                <button class="filter-selector">
-                    <div class="body">由新到舊</div>
-                    <div class="material-icons">keyboard_arrow_down</div>
-                </button>
-                
+                <div class="filter-selector-dropdown">
+                    <button type="button" class="filter-selector-button">
+                        <div class="filter-selector-button-text body">由新到舊</div>
+                        <div class="material-icons">keyboard_arrow_down</div>
+                    </button>
+                    <ul class="filter-selector-dropdown-menu">
+                        <li class="option"><a href="#" class="new-to-old body">由新到舊</a></li>
+                        <li class="option"><a href="#" class="old-to-new body">由舊到新</a></li>
+                    </ul>
+                </div>
             </div>
             <ul class="card-list">
                 <li class="card">
@@ -295,12 +300,12 @@
                 </li>
             </ul>
             <ul class="pagination">
-                <a href="" class="pageitem"><li class="small">1</li></a>
-                <a href="" class="pageitem"><li class="small">2</li></a>
-                <a href="" class="pageitem"><li class="small">3</li></a>
-                <a href="" class="pageitem"><li class="small">4</li></a>
-                <a href="" class="pageitem"><li class="small">5</li></a>
-                <a href=""><li class="pageitem"><div class="material-icons">keyboard_arrow_right</div></li></a>
+                <a href="" class="pagination-item"><li class="small">1</li></a>
+                <a href="" class="pagination-item"><li class="small">2</li></a>
+                <a href="" class="pagination-item"><li class="small">3</li></a>
+                <a href="" class="pagination-item"><li class="small">4</li></a>
+                <a href="" class="pagination-item"><li class="small">5</li></a>
+                <a href=""><li class="pagination-item"><div class="material-icons">keyboard_arrow_right</div></li></a>
             </ul>
         </section>  
     </div>
@@ -332,7 +337,7 @@
         </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="JS/all.js"></script>
 </body>
 </html>
