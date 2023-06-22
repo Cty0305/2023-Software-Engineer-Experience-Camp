@@ -74,13 +74,13 @@ body{
 .small{
     font-size: 0.875rem;
     font-weight: $regular;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 
 .tiny{
     font-size: 0.75rem;
     font-weight: $regular;
-    line-height: 1.1;
+    line-height: 1.5;
 }
 
 @media(max-width:768px){
@@ -127,13 +127,13 @@ body{
     .mb-small{
         font-size: 0.875rem;
         font-weight: $regular;
-        line-height: 1.3;
+        line-height: 1.5;
     }
     
     .mb-tiny{
         font-size: 0.75rem;
         font-weight: $regular;
-        line-height: 1.1;
+        line-height: 1.5;
     }
 }
 
@@ -421,24 +421,62 @@ body{
             display: flex;
             justify-content: space-between;
             height: 64px;
-            .filter-sign{
-                border: 1px solid $black-20;
-                padding: 20px 32px 20px 40px;
-                border-radius: 16px;
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                &:hover{
-                    border: 1px solid $black-100;
+            .filter-sign-dropdown{
+                position:relative;
+                .filter-sign-button{
+                    border: 1px solid $black-20;
+                    padding: 20px 32px 20px 40px;
+                    border-radius: 16px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    &:hover{
+                        border: 1px solid $black-100;
+                    }
+                    cursor: pointer;
+                    .body{
+                        color: $black-100;
+                        font-weight: $regular;
+                    }
+                    .material-icons{
+                        color:$black-100;
+                        font-size: 16px;
+                    }
                 }
-                cursor: pointer;
-                .body{
-                    color: $black-100;
-                    font-weight: $regular;
+                .filter-sign-dropdown-menu{
+                    width: 240px;
+                    display: none;
+                    margin-top: 4px;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+                    padding: 20px 0;
+                    border-radius: 16px;
+                    position: absolute;
+                    background-color: $black-0;
+                    left:0;
+                    z-index: 1;
                 }
-                .material-icons{
-                    color:$black-100;
-                    font-size: 16px;
+                .filter-sign-dropdown-menu.show{
+                    display: flex;
+                    flex-direction: column;
+                    gap:24px;
+                    .filter-sign-dropdown-submenu{
+                    display: flex;
+                    flex-direction: column;
+                    gap:8px;
+                    .title{
+                        color: $black-60;
+                        font-weight: 700;
+                        padding: 0 32px 0 40px;
+                    }
+                    a{
+                        padding: 4px 32px 4px 40px;
+                        display: block;
+                        color: $black-100;
+                        &:hover{
+                            background-color: $black-20;
+                        }
+                    }
+                    }
                 }
             }
             .filter-list{
@@ -823,6 +861,9 @@ body{
             .filter{
                 flex-wrap:wrap;
                 margin-bottom: 48px;
+                .filter-sign-dropdown-menu.show{
+                    width: 351px;
+                }
                 .filter-list{
                     overflow-x: auto;
                     margin: 24px auto 48px auto;

@@ -2,6 +2,19 @@ $(document).ready(function () {
 
   // Filter
 
+  // 點擊.filter-sign-button按钮时切换.show
+  $(".filter-sign-button").click(function() {
+    $(".filter-sign-dropdown-menu").toggleClass("show");
+  });
+
+  // 點擊其他地方移除.show
+  $(document).click(function(event) {
+    var target = $(event.target);
+    if (!target.closest('.filter-sign-button').length && !target.closest('.filter-sign-dropdown-menu').length) {
+      $('.filter-sign-dropdown-menu').removeClass('show');
+    }
+  });
+
   // 點擊.filter-selector-button按钮时切换.show
   $(".filter-selector-button").click(function() {
     $(".filter-selector-dropdown-menu").toggleClass("show");

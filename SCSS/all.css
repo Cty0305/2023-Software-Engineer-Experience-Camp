@@ -130,13 +130,13 @@ body a {
 .small {
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .tiny {
   font-size: 0.75rem;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
@@ -176,12 +176,12 @@ body a {
   .mb-small {
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.5;
   }
   .mb-tiny {
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.5;
   }
 }
 .container-top {
@@ -462,7 +462,10 @@ body a {
   justify-content: space-between;
   height: 64px;
 }
-.container-mid .container-mid-content .filter .filter-sign {
+.container-mid .container-mid-content .filter .filter-sign-dropdown {
+  position: relative;
+}
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-button {
   border: 1px solid #f2f2f2;
   padding: 20px 32px 20px 40px;
   border-radius: 16px;
@@ -471,16 +474,51 @@ body a {
   gap: 12px;
   cursor: pointer;
 }
-.container-mid .container-mid-content .filter .filter-sign:hover {
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-button:hover {
   border: 1px solid #020202;
 }
-.container-mid .container-mid-content .filter .filter-sign .body {
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-button .body {
   color: #020202;
   font-weight: 400;
 }
-.container-mid .container-mid-content .filter .filter-sign .material-icons {
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-button .material-icons {
   color: #020202;
   font-size: 16px;
+}
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-dropdown-menu {
+  width: 240px;
+  display: none;
+  margin-top: 4px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px 0;
+  border-radius: 16px;
+  position: absolute;
+  background-color: #ffffff;
+  left: 0;
+  z-index: 1;
+}
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-dropdown-menu.show {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-dropdown-menu.show .filter-sign-dropdown-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-dropdown-menu.show .filter-sign-dropdown-submenu .title {
+  color: #919191;
+  font-weight: 700;
+  padding: 0 32px 0 40px;
+}
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-dropdown-menu.show .filter-sign-dropdown-submenu a {
+  padding: 4px 32px 4px 40px;
+  display: block;
+  color: #020202;
+}
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-dropdown-menu.show .filter-sign-dropdown-submenu a:hover {
+  background-color: #f2f2f2;
 }
 .container-mid .container-mid-content .filter .filter-list {
   display: flex;
@@ -848,6 +886,9 @@ body a {
   .container-mid .container-mid-content .filter {
     flex-wrap: wrap;
     margin-bottom: 48px;
+  }
+  .container-mid .container-mid-content .filter .filter-sign-dropdown-menu.show {
+    width: 351px;
   }
   .container-mid .container-mid-content .filter .filter-list {
     overflow-x: auto;
