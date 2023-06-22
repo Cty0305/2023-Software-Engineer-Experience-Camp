@@ -16,6 +16,127 @@ body{
     }
 }
 
+.d1,.d2,.d3,.h1,.h2,.h3,.h4,.h5,.h6{
+    font-weight: 900;
+    line-height: 1.2;
+}
+.d1{
+    font-size: 160px;
+    font-weight: 700;
+}
+
+.d2{
+    font-size: 120px;
+    font-weight: $regular;
+}
+
+.d3{
+    font-size: 80px;
+    font-weight: $regular;
+}
+
+.h1{
+    font-size: 3rem;
+    font-weight: $regular;
+}
+
+.h2{
+    font-size:2.5rem;
+    font-weight: $regular;
+}
+
+.h3{
+    font-size: 2rem;
+    font-weight: $regular;
+}
+
+.h4{
+    font-size: 1.75rem;
+    font-weight: $regular;
+}
+
+.h5{
+    font-size: 1.5rem;
+    font-weight: $regular;
+}
+
+.h6{
+    font-size: 1.25rem;
+    font-weight: $regular;
+}
+
+.body{
+    font-size: 1rem;
+    font-weight: $regular;
+    line-height: 1.5;
+}
+
+.small{
+    font-size: 0.875rem;
+    font-weight: $regular;
+    line-height: 1.3;
+}
+
+.tiny{
+    font-size: 0.75rem;
+    font-weight: $regular;
+    line-height: 1.1;
+}
+
+@media(max-width:768px){
+    .mb-h1,.mb-h2,.mb-h3,.mb-h4,.mb-h5,.mb-h6{
+        font-weight: 900;
+        line-height: 1.2;
+    }
+    .mb-h1{
+        font-size: 3rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h2{
+        font-size:2.5rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h3{
+        font-size: 2rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h4{
+        font-size: 1.75rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h5{
+        font-size: 1.5rem;
+        font-weight: $regular;
+    }
+    
+    .mb-h6{
+        font-size: 1.25rem;
+        font-weight: $regular;
+    }
+    
+    .mb-body{
+        font-size: 1rem;
+        font-weight: $regular;
+        line-height: 1.5;
+    }
+    
+    .mb-small{
+        font-size: 0.875rem;
+        font-weight: $regular;
+        line-height: 1.3;
+    }
+    
+    .mb-tiny{
+        font-size: 0.75rem;
+        font-weight: $regular;
+        line-height: 1.1;
+    }
+}
+
 .container-top{
     max-width: 1326px;
     padding: 0 15px;
@@ -27,13 +148,14 @@ body{
         justify-content: space-between;
         border-bottom:1px solid $black-0;
         align-items: center;
-        .logo{
+        .logo{            
+            display: flex;
+            gap:16px;
+            img{              
             height: 40px;
-            a{
-                display: contents;
-                img{
-                height: 40px;
-                }
+            }
+            h1{
+                display: none;
             }
         }
         .menulist{
@@ -150,24 +272,34 @@ body{
             font-weight: 900;
         }
         .logo-list{
-            // position: absolute;
+            position: relative;
             margin: 80px 0 160px 0;
             display: flex;            
             flex-direction: column;
             overflow: hidden;
             gap:20px;
-            // top:0;
-            // &::before{
-            //     background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
-            //     left: 0;
-            // }
-            // &::after {
-            //     background: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
-            //     right: 0;
-            // }
+            &::before{
+                content: " ";
+                position: absolute;
+                z-index: 1;
+                left:0;
+                height: 105px;
+                min-width: 196px;
+                background: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.991615) 11.79%, rgba(0, 0, 0, 0.967585) 21.38%, rgba(0, 0, 0, 0.9296) 29.12%, rgba(0, 0, 0, 0.879348) 35.34%, rgba(0, 0, 0, 0.818519) 40.37%, rgba(0, 0, 0, 0.7488) 44.56%, rgba(0, 0, 0, 0.671881) 48.24%, rgba(0, 0, 0, 0.589452) 51.76%, rgba(0, 0, 0, 0.5032) 55.44%, rgba(0, 0, 0, 0.414815) 59.63%, rgba(0, 0, 0, 0.325985) 64.66%, rgba(0, 0, 0, 0.2384) 70.88%, rgba(0, 0, 0, 0.153748) 78.62%, rgba(0, 0, 0, 0.0737185) 88.21%, rgba(0, 0, 0, 0) 100%);
+            }
+            &::after{
+                content: " ";
+                position: absolute;
+                right:0;
+                height: 105px;
+                z-index: 1;
+                min-width: 196px;
+                background: linear-gradient(to left, #000000 0%, rgba(0, 0, 0, 0.991615) 11.79%, rgba(0, 0, 0, 0.967585) 21.38%, rgba(0, 0, 0, 0.9296) 29.12%, rgba(0, 0, 0, 0.879348) 35.34%, rgba(0, 0, 0, 0.818519) 40.37%, rgba(0, 0, 0, 0.7488) 44.56%, rgba(0, 0, 0, 0.671881) 48.24%, rgba(0, 0, 0, 0.589452) 51.76%, rgba(0, 0, 0, 0.5032) 55.44%, rgba(0, 0, 0, 0.414815) 59.63%, rgba(0, 0, 0, 0.325985) 64.66%, rgba(0, 0, 0, 0.2384) 70.88%, rgba(0, 0, 0, 0.153748) 78.62%, rgba(0, 0, 0, 0.0737185) 88.21%, rgba(0, 0, 0, 0) 100%);
+            }
             .logo-group{
                 display: flex;            
                 gap:20px;
+                height: 40px;
             &.logo-group-top{
                 animation: carousel 20s linear infinite;
             }
@@ -265,7 +397,7 @@ body{
             display: flex;
             align-items: center;
             border-radius: 16px;
-            padding: 20px 40px;
+            padding: 12px 40px;
             .material-icons{
                 color:$black-60;
                 margin-right: 15.51px;
@@ -535,6 +667,10 @@ body{
                 }
             }
             .footer-logo{
+                .logo{
+                    display: flex;
+                    gap:16px;
+                }
                 img{
                     height: 40px;
                 }
@@ -644,6 +780,12 @@ body{
                 max-width: 100%;
                 margin: 24px 0 48px 0;
                 gap:12px;
+                &::before{
+                    min-width: 82px;
+                }
+                &::after{
+                    min-width: 82px;
+                }
                 .logo-group{
                     &.logo-group-top{
                         animation:carousel 10s linear infinite;
