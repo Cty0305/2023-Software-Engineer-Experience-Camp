@@ -16,121 +16,122 @@ body{
     }
 }
 
-.d1,.d2,.d3,.h1,.h2,.h3,.h4,.h5,.h6{
+.fs-d1,.fs-d2,.fs-d3,.fs-h1,.fs-h2,.fs-h3,.fs-h4,.fs-h5,.fs-h6{
     font-weight: 900;
     line-height: 1.2;
 }
-.d1{
+
+.fs-d1{
     font-size: 160px;
     font-weight: 700;
 }
 
-.d2{
+.fs-d2{
     font-size: 120px;
     font-weight: $regular;
 }
 
-.d3{
+.fs-d3{
     font-size: 80px;
     font-weight: $regular;
 }
 
-.h1{
+.fs-h1{
     font-size: 3rem;
     font-weight: $regular;
 }
 
-.h2{
+.fs-h2{
     font-size:2.5rem;
     font-weight: $regular;
 }
 
-.h3{
+.fs-h3{
     font-size: 2rem;
     font-weight: $regular;
 }
 
-.h4{
+.fs-h4{
     font-size: 1.75rem;
     font-weight: $regular;
 }
 
-.h5{
+.fs-h5{
     font-size: 1.5rem;
     font-weight: $regular;
 }
 
-.h6{
+.fs-h6{
     font-size: 1.25rem;
     font-weight: $regular;
 }
 
-.body{
+.fs-lg{
     font-size: 1rem;
     font-weight: $regular;
     line-height: 1.5;
 }
 
-.small{
+.fs-md{
     font-size: 0.875rem;
     font-weight: $regular;
     line-height: 1.5;
 }
 
-.tiny{
+.fs-sm{
     font-size: 0.75rem;
     font-weight: $regular;
     line-height: 1.5;
 }
 
 @media(max-width:768px){
-    .mb-h1,.mb-h2,.mb-h3,.mb-h4,.mb-h5,.mb-h6{
+    .fs-mb-h1,.fs-mb-h2,.fs-mb-h3,.fs-mb-h4,.fs-mb-h5,.fs-mb-h6{
         font-weight: 900;
         line-height: 1.2;
     }
-    .mb-h1{
+    .fs-mb-h1{
         font-size: 3rem;
         font-weight: $regular;
     }
     
-    .mb-h2{
+    .fs-mb-h2{
         font-size:2.5rem;
         font-weight: $regular;
     }
     
-    .mb-h3{
+    .fs-mb-h3{
         font-size: 2rem;
         font-weight: $regular;
     }
     
-    .mb-h4{
+    .fs-mb-h4{
         font-size: 1.75rem;
         font-weight: $regular;
     }
     
-    .mb-h5{
+    .fs-mb-h5{
         font-size: 1.5rem;
         font-weight: $regular;
     }
     
-    .mb-h6{
+    .fs-mb-h6{
         font-size: 1.25rem;
         font-weight: $regular;
     }
     
-    .mb-body{
+    .fs-mb-lg{
         font-size: 1rem;
         font-weight: $regular;
         line-height: 1.5;
     }
     
-    .mb-small{
+    .fs-mb-md{
         font-size: 0.875rem;
         font-weight: $regular;
         line-height: 1.5;
     }
     
-    .mb-tiny{
+    .fs-mb-sm{
         font-size: 0.75rem;
         font-weight: $regular;
         line-height: 1.5;
@@ -165,14 +166,14 @@ body{
             a{
                 display: block;
             }
-            .body{
+            .fs-lg{
                 font-weight: 700;
             }
         }
         a{
             display: none;
         }
-        .body{
+        .fs-lg{
             color:$black-0;
         }
     }
@@ -192,7 +193,7 @@ body{
                 background-color: $black-0;
                 color:$black-100;
             }
-            .h6{
+            .fs-h6{
                 font-weight: 900;
             }
         }
@@ -238,10 +239,10 @@ body{
             display: flex;
             justify-content: space-between;
             margin-bottom: 80px;
-            .h3{
+            .fs-h3{
                 font-weight: $bold;
             }
-            .h1{
+            .fs-h1{
                 max-width: 856px;
                 font-weight: $bold;
             }
@@ -268,7 +269,7 @@ body{
     .partner{
         margin-bottom: 160px;
         position: relative;
-        .h3{
+        .fs-h3{
             font-weight: 900;
         }
         .logo-list{
@@ -362,7 +363,7 @@ body{
                         }
                         .profile{
                             gap:4px;
-                            .body{
+                            .fs-lg{
                                 height: auto;
                                 margin-bottom: 4px;
                             }
@@ -392,7 +393,7 @@ body{
     .container-mid-content{
         max-width: 1296px;
         margin: 0 auto;
-        .d3{
+        .fs-d3{
             color: $black-100;
             text-align: center;
             font-weight: $bold;
@@ -440,7 +441,7 @@ body{
                         border: 1px solid $black-100;
                     }
                     cursor: pointer;
-                    .body{
+                    .fs-lg{
                         color: $black-100;
                         font-weight: $regular;
                     }
@@ -498,11 +499,11 @@ body{
                     white-space: nowrap;
                     &:hover{
                         background-color: $black-20;
-                        .body{
+                        .fs-lg{
                             color: $black-100;
                         }
                     }
-                    .body{
+                    .fs-lg{
                         color: $black-60;
                         font-weight: 700;
                     }
@@ -588,12 +589,12 @@ body{
                         flex-grow:1;
                         padding: 20px 32px 20px 32px;
                         border-bottom: 1px solid $black-20;
-                        .h6{
+                        .fs-h6{
                             color: $black-100;
                             font-weight: $bold;
                             margin-bottom: 12px;
                         }
-                        .small{
+                        .fs-md{
                             color: $black-80;
                             font-weight: $regular;
                         }
@@ -603,9 +604,12 @@ body{
                         border-bottom: 1px solid $black-20;
                         display: flex;
                         justify-content: space-between;
-                        .body{
+                        .fs-lg{
                             color: $black-100;
                             font-weight: 700;
+                        }
+                        .author{
+                            font-weight: 400;
                         }
                     }
                     .card-share{
@@ -615,7 +619,7 @@ body{
                         padding: 20px 32px 20px 32px;
                         a{
                             display: block;
-                            .body{
+                            .fs-lg{
                                 color: $black-100;
                                 font-weight: $regular;
                             }
@@ -644,7 +648,7 @@ body{
                 &:hover{
                     color: $black-0;
                     background-color: $black-100;
-                    >.small{
+                    >.fs-md{
                         color: $black-0;
                     }
                     .material-icons{
@@ -660,7 +664,7 @@ body{
                     width: 48px;
                 }
             }
-            .small{
+            .fs-md{
                 font-weight: 700;
                 text-align: center; 
                 color: $black-100;
@@ -680,7 +684,7 @@ body{
         align-items: center;
         margin: 80px 0px;
         gap: 40px;
-        .h1{            
+        .fs-h1{            
             font-weight: $bold;
         }
         a{
@@ -694,7 +698,7 @@ body{
                 background-color: $black-0;
                 color:$black-100;
             }
-            .h6{
+            .fs-h6{
                 font-weight: 900;
             }
         }
@@ -804,11 +808,11 @@ body{
             .service-title{
                 display: flex;
                 flex-direction: column;
-                .mb-h6{
+                .fs-mb-h6{
                     margin-bottom: 24px;
                     font-weight: 900;
                 }
-                .mb-h3{
+                .fs-mb-h3{
                     max-width: 351px;
                     font-weight: 900;
                 }
@@ -862,7 +866,7 @@ body{
         padding: 80px 12px;
         .container-mid-content{
             max-width: 100%;
-            .mb-h3{
+            .fs-mb-h3{
                 margin-bottom: 32px;
                 text-align: center;
                 padding: 0 30px;
@@ -899,7 +903,7 @@ body{
         padding: 0 12px;
         .contactus{
             margin: 120px 0;
-            .mb-h3{
+            .fs-mb-h3{
                 text-align: center;
                 max-width: 224px;
             }

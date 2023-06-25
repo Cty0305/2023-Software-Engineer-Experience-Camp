@@ -71,114 +71,114 @@ body a {
   display: inline-block;
 }
 
-.d1, .d2, .d3, .h1, .h2, .h3, .h4, .h5, .h6 {
+.fs-d1, .fs-d2, .fs-d3, .fs-h1, .fs-h2, .fs-h3, .fs-h4, .fs-h5, .fs-h6 {
   font-weight: 900;
   line-height: 1.2;
 }
 
-.d1 {
+.fs-d1 {
   font-size: 160px;
   font-weight: 700;
 }
 
-.d2 {
+.fs-d2 {
   font-size: 120px;
   font-weight: 400;
 }
 
-.d3 {
+.fs-d3 {
   font-size: 80px;
   font-weight: 400;
 }
 
-.h1 {
+.fs-h1 {
   font-size: 3rem;
   font-weight: 400;
 }
 
-.h2 {
+.fs-h2 {
   font-size: 2.5rem;
   font-weight: 400;
 }
 
-.h3 {
+.fs-h3 {
   font-size: 2rem;
   font-weight: 400;
 }
 
-.h4 {
+.fs-h4 {
   font-size: 1.75rem;
   font-weight: 400;
 }
 
-.h5 {
+.fs-h5 {
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-.h6 {
+.fs-h6 {
   font-size: 1.25rem;
   font-weight: 400;
 }
 
-.body {
+.fs-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
 }
 
-.small {
+.fs-md {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
 }
 
-.tiny {
+.fs-sm {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-  .mb-h1, .mb-h2, .mb-h3, .mb-h4, .mb-h5, .mb-h6 {
+  .fs-mb-h1, .fs-mb-h2, .fs-mb-h3, .fs-mb-h4, .fs-mb-h5, .fs-mb-h6 {
     font-weight: 900;
     line-height: 1.2;
   }
-  .mb-h1 {
+  .fs-mb-h1 {
     font-size: 3rem;
     font-weight: 400;
   }
-  .mb-h2 {
+  .fs-mb-h2 {
     font-size: 2.5rem;
     font-weight: 400;
   }
-  .mb-h3 {
+  .fs-mb-h3 {
     font-size: 2rem;
     font-weight: 400;
   }
-  .mb-h4 {
+  .fs-mb-h4 {
     font-size: 1.75rem;
     font-weight: 400;
   }
-  .mb-h5 {
+  .fs-mb-h5 {
     font-size: 1.5rem;
     font-weight: 400;
   }
-  .mb-h6 {
+  .fs-mb-h6 {
     font-size: 1.25rem;
     font-weight: 400;
   }
-  .mb-body {
+  .fs-mb-lg {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
   }
-  .mb-small {
+  .fs-mb-md {
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5;
   }
-  .mb-tiny {
+  .fs-mb-sm {
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.5;
@@ -214,13 +214,13 @@ body a {
 .container-top .navbar .menulist a {
   display: block;
 }
-.container-top .navbar .menulist .body {
+.container-top .navbar .menulist .fs-lg {
   font-weight: 700;
 }
 .container-top .navbar a {
   display: none;
 }
-.container-top .navbar .body {
+.container-top .navbar .fs-lg {
   color: #ffffff;
 }
 .container-top .kv {
@@ -240,7 +240,7 @@ body a {
   background-color: #ffffff;
   color: #020202;
 }
-.container-top .kv a .h6 {
+.container-top .kv a .fs-h6 {
   font-weight: 900;
 }
 .container-top .animation {
@@ -282,10 +282,10 @@ body a {
   justify-content: space-between;
   margin-bottom: 80px;
 }
-.container-top .our-service .service-title .h3 {
+.container-top .our-service .service-title .fs-h3 {
   font-weight: 900;
 }
-.container-top .our-service .service-title .h1 {
+.container-top .our-service .service-title .fs-h1 {
   max-width: 856px;
   font-weight: 900;
 }
@@ -310,7 +310,7 @@ body a {
   margin-bottom: 160px;
   position: relative;
 }
-.container-top .partner .h3 {
+.container-top .partner .fs-h3 {
   font-weight: 900;
 }
 .container-top .partner .logo-list {
@@ -403,7 +403,7 @@ body a {
 .container-top .partner .testimonial-area .testimonial-content .testimonial-list .testimonial-card .customer .profile {
   gap: 4px;
 }
-.container-top .partner .testimonial-area .testimonial-content .testimonial-list .testimonial-card .customer .profile .body {
+.container-top .partner .testimonial-area .testimonial-content .testimonial-list .testimonial-card .customer .profile .fs-lg {
   height: auto;
   margin-bottom: 4px;
 }
@@ -426,7 +426,7 @@ body a {
   max-width: 1296px;
   margin: 0 auto;
 }
-.container-mid .container-mid-content .d3 {
+.container-mid .container-mid-content .fs-d3 {
   color: #020202;
   text-align: center;
   font-weight: 900;
@@ -480,7 +480,7 @@ body a {
 .container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-button:hover {
   border: 1px solid #020202;
 }
-.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-button .body {
+.container-mid .container-mid-content .filter .filter-sign-dropdown .filter-sign-button .fs-lg {
   color: #020202;
   font-weight: 400;
 }
@@ -539,10 +539,10 @@ body a {
 .container-mid .container-mid-content .filter .filter-list .filter-item:hover {
   background-color: #f2f2f2;
 }
-.container-mid .container-mid-content .filter .filter-list .filter-item:hover .body {
+.container-mid .container-mid-content .filter .filter-list .filter-item:hover .fs-lg {
   color: #020202;
 }
-.container-mid .container-mid-content .filter .filter-list .filter-item .body {
+.container-mid .container-mid-content .filter .filter-list .filter-item .fs-lg {
   color: #919191;
   font-weight: 700;
 }
@@ -628,12 +628,12 @@ body a {
   padding: 20px 32px 20px 32px;
   border-bottom: 1px solid #f2f2f2;
 }
-.container-mid .container-mid-content .card-list .card .card-content .card-detail .h6 {
+.container-mid .container-mid-content .card-list .card .card-content .card-detail .fs-h6 {
   color: #020202;
   font-weight: 900;
   margin-bottom: 12px;
 }
-.container-mid .container-mid-content .card-list .card .card-content .card-detail .small {
+.container-mid .container-mid-content .card-list .card .card-content .card-detail .fs-md {
   color: #525252;
   font-weight: 400;
 }
@@ -643,9 +643,12 @@ body a {
   display: flex;
   justify-content: space-between;
 }
-.container-mid .container-mid-content .card-list .card .card-content .card-info .body {
+.container-mid .container-mid-content .card-list .card .card-content .card-info .fs-lg {
   color: #020202;
   font-weight: 700;
+}
+.container-mid .container-mid-content .card-list .card .card-content .card-info .author {
+  font-weight: 400;
 }
 .container-mid .container-mid-content .card-list .card .card-content .card-share {
   display: flex;
@@ -656,7 +659,7 @@ body a {
 .container-mid .container-mid-content .card-list .card .card-content .card-share a {
   display: block;
 }
-.container-mid .container-mid-content .card-list .card .card-content .card-share a .body {
+.container-mid .container-mid-content .card-list .card .card-content .card-share a .fs-lg {
   color: #020202;
   font-weight: 400;
 }
@@ -683,7 +686,7 @@ body a {
   color: #ffffff;
   background-color: #020202;
 }
-.container-mid .container-mid-content .pagination .pagination-item:hover > .small {
+.container-mid .container-mid-content .pagination .pagination-item:hover > .fs-md {
   color: #ffffff;
 }
 .container-mid .container-mid-content .pagination .pagination-item:hover .material-icons {
@@ -697,7 +700,7 @@ body a {
   height: 48px;
   width: 48px;
 }
-.container-mid .container-mid-content .pagination .small {
+.container-mid .container-mid-content .pagination .fs-md {
   font-weight: 700;
   text-align: center;
   color: #020202;
@@ -716,7 +719,7 @@ body a {
   margin: 80px 0px;
   gap: 40px;
 }
-.container-bottom .contactus .h1 {
+.container-bottom .contactus .fs-h1 {
   font-weight: 900;
 }
 .container-bottom .contactus a {
@@ -731,7 +734,7 @@ body a {
   background-color: #ffffff;
   color: #020202;
 }
-.container-bottom .contactus a .h6 {
+.container-bottom .contactus a .fs-h6 {
   font-weight: 900;
 }
 .container-bottom .footer .footermenu-top {
@@ -831,11 +834,11 @@ body a {
     display: flex;
     flex-direction: column;
   }
-  .container-top .our-service .service-title .mb-h6 {
+  .container-top .our-service .service-title .fs-mb-h6 {
     margin-bottom: 24px;
     font-weight: 900;
   }
-  .container-top .our-service .service-title .mb-h3 {
+  .container-top .our-service .service-title .fs-mb-h3 {
     max-width: 351px;
     font-weight: 900;
   }
@@ -878,7 +881,7 @@ body a {
   .container-mid .container-mid-content {
     max-width: 100%;
   }
-  .container-mid .container-mid-content .mb-h3 {
+  .container-mid .container-mid-content .fs-mb-h3 {
     margin-bottom: 32px;
     text-align: center;
     padding: 0 30px;
@@ -915,7 +918,7 @@ body a {
   .container-bottom .contactus {
     margin: 120px 0;
   }
-  .container-bottom .contactus .mb-h3 {
+  .container-bottom .contactus .fs-mb-h3 {
     text-align: center;
     max-width: 224px;
   }
@@ -943,11 +946,7 @@ body a {
     margin-bottom: 12px;
   }
 }
-body {
-  box-sizing: border-box;
-}
-
-.container-top .kv .h1 {
+.container-top .kv .fs-h1 {
   margin-left: 50%;
   max-width: 636px;
   margin-top: 80px;
@@ -988,7 +987,7 @@ body {
 .container-top .pricing {
   margin: 160px 0;
 }
-.container-top .pricing .h3 {
+.container-top .pricing .fs-h3 {
   margin-bottom: 80px;
   font-weight: 900;
 }
@@ -1014,7 +1013,7 @@ body {
   border-bottom: 1px solid #525252;
   height: 254px;
 }
-.container-top .pricing .pricing-card-list .pricing-card .pricing-content .h3 {
+.container-top .pricing .pricing-card-list .pricing-card .pricing-content .fs-h3 {
   font-weight: 900;
   margin-bottom: 12px;
 }
@@ -1040,7 +1039,7 @@ body {
   align-items: center;
   gap: 12px;
 }
-.container-top .pricing .pricing-card-list .pricing-card .pricing-card-plan a .body {
+.container-top .pricing .pricing-card-list .pricing-card .pricing-card-plan a .fs-lg {
   font-weight: 700;
 }
 .container-top .guideline {
@@ -1048,7 +1047,7 @@ body {
   justify-content: space-between;
   margin-bottom: 160px;
 }
-.container-top .guideline .h3 {
+.container-top .guideline .fs-h3 {
   font-weight: 900;
 }
 .container-top .guideline .guideline-list {
@@ -1065,10 +1064,10 @@ body {
   padding-bottom: 40px;
   gap: 24px;
 }
-.container-top .guideline .guideline-list .guideline-item .h1 {
+.container-top .guideline .guideline-list .guideline-item .fs-h1 {
   font-weight: 900;
 }
-.container-top .guideline .guideline-list .guideline-item .h3 {
+.container-top .guideline .guideline-list .guideline-item .fs-h3 {
   font-weight: 400;
 }
 
@@ -1079,7 +1078,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.container-bottom .faq .faq-content .h3 {
+.container-bottom .faq .faq-content .fs-h3 {
   font-weight: 900;
 }
 .container-bottom .faq .faq-content .faq-list {
@@ -1123,7 +1122,7 @@ body {
   .container-top .kv .kv-title {
     margin: 40px 0 64px 0;
   }
-  .container-top .kv .h1 {
+  .container-top .kv .fs-h1 {
     margin: 0 0 258px 94px;
   }
   .container-top .animation-price .grass-list .grass-item {
@@ -1136,7 +1135,7 @@ body {
   .container-top .pricing {
     margin: 120px 0;
   }
-  .container-top .pricing .mb-h6 {
+  .container-top .pricing .fs-mb-h6 {
     font-weight: 900;
     margin-bottom: 24px;
   }
@@ -1163,7 +1162,7 @@ body {
   .container-bottom .faq .faq-content {
     display: block;
   }
-  .container-bottom .faq .faq-content .mb-h6 {
+  .container-bottom .faq .faq-content .fs-mb-h6 {
     margin-bottom: 24px;
   }
   .container-bottom .faq .faq-content .faq-list {
