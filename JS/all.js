@@ -1,5 +1,37 @@
 $(document).ready(function () {
 
+  // Slider
+  const swiper = new Swiper('.testimonial-content', {
+    slidesPerView:3,
+    slidesPerGroup:1,
+    spaceBetween:24,
+    loop:true,
+    centerSlide:"true",
+    fade:"true",
+    // 分頁   
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+      dynamicBullets:true,
+    },
+    breakpoints:{
+      992:{
+        grabCursor:"false",
+        slidesPerView:3,
+      },
+      767:{
+        grabCursor:"true",
+        slidesPerView:2,
+      },
+      0:{
+        grabCursor:"true",
+        slidesPerView:1,
+      }
+    }
+  });
+  
+
+
   // Filter
 
   // 點擊.filter-sign-button按钮时切换.show
@@ -15,6 +47,19 @@ $(document).ready(function () {
     }
   });
 
+  // 點擊選項後更改Filter-sign-button內容
+  $('.filter-sign-dropdown-menu .option').click(function(e) {
+    e.preventDefault();    
+    var optionText = $(this).text();
+    $('.filter-sign-button-text').text(optionText);
+    $(".filter-sign-button").find(".material-icons").css({"background-color":"#020202","color":"#ffffff"});
+    $(".filter-sign-dropdown-menu").removeClass("show");
+  });
+
+
+
+
+
   // 點擊.filter-selector-button按钮时切换.show
   $(".filter-selector-button").click(function() {
     $(".filter-selector-dropdown-menu").toggleClass("show");
@@ -27,7 +72,7 @@ $(document).ready(function () {
       $('.filter-selector-dropdown-menu').removeClass('show');
     }
   });
-
+  
   $('.new-to-old').click(function(e) {
     e.preventDefault();
     $('.filter-selector-dropdown-menu').toggleClass('show');
@@ -45,7 +90,6 @@ $(document).ready(function () {
   // 點擊faq-item 加.clicked icon变回"add"
   $(".faq-item").click(function(event) {
     event.stopPropagation();
-  
     if ($(this).hasClass("clicked")) {
       $(this).removeClass("clicked");
       $(this).find(".material-icons").text("add");
@@ -58,6 +102,7 @@ $(document).ready(function () {
     }
   });
   
+
   // 點擊其他地方移除.clicked icon变回"add"
   $(document).click(function(event) {
     var clickedElement = event.target;

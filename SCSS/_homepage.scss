@@ -333,46 +333,52 @@ body{
         }    
     }
     
-    
-    .testimonial-list{
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        .testimonial-card{
-            width: calc(100% / 3);
-            background: #FFFFFF14;
-            border-radius: 16px;
-            display: flex;
-            flex-direction: column;
-            padding: 40px;
-            .stargroup{
-                margin-bottom: 20px;
-                .material-icons{
-                    font-size: 16px;
-                }
-            }
-            }
-            .quote{
-                overflow: hidden;
-                color: $black-20;
-                max-height: 215px;
-                margin-bottom: 20px;
-            }
-            .customer{
-                display: flex;
-                align-items: center;
-                img{
-                    margin-right: 16px;               
-                }
-                .profile{
-                    gap:4px;
-                    .body{
-                        height: auto;
-                        margin-bottom: 4px;
+    .testimonial-area{        
+        .testimonial-content{
+            .testimonial-list{
+                display: flex;        
+                .testimonial-card{
+                    background: #FFFFFF14;
+                    border-radius: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 40px;
+                    height: auto;
+                    .stargroup{
+                        margin-bottom: 20px;
+                        .material-icons{
+                            font-size: 16px;
+                        }
                     }
-                }                
-            }
+                    .quote{
+                        margin-bottom: 40px;
+                        flex-grow:1;
+                    }
+                    .customer{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            margin-right: 16px;               
+                        }
+                        .profile{
+                            gap:4px;
+                            .body{
+                                height: auto;
+                                margin-bottom: 4px;
+                            }
+                        }                
+                    }
+                    }
+                }
         }
+        .swiper-pagination-bullet{
+            background-color: grey;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: white;
+        }
+    }
     }
 }
 
@@ -556,6 +562,8 @@ body{
             justify-content: space-between;
             flex-wrap: wrap;
             .card{
+                display: flex;
+                flex-direction: column;
                 border: 1px solid $black-20;
                 border-radius: 16px;
                 width: 32%;
@@ -575,7 +583,9 @@ body{
                 .card-content{
                     display: flex;
                     flex-direction: column;
+                    flex-grow:1;
                     .card-detail{
+                        flex-grow:1;
                         padding: 20px 32px 20px 32px;
                         border-bottom: 1px solid $black-20;
                         .h6{
@@ -814,6 +824,7 @@ body{
             }
         }
         .partner{
+            margin-bottom: 120px;
             .logo-list{
                 max-width: 100%;
                 margin: 24px 0 48px 0;
@@ -833,17 +844,15 @@ body{
                     }
                 }
             }
-            .testimonial-list{
-                white-space: nowrap;
-                overflow-x: auto;
-                justify-content: unset;
-                .testimonial-card{
-                    padding: 20px;
-                    min-width: 100%;
-                    .quote{
-                        min-height: 144px;
-                        white-space: normal;
-                    }    
+            .testimonial-area{
+                .testimonial-content{
+                    .testimonial-list{
+                        .testimonial-card{
+                            .quote{
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
                 }
             }
         }
