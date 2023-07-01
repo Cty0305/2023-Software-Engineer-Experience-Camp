@@ -124,3 +124,61 @@ $(".backtotop").click(function (e) {
   });
   });
 });
+
+
+const apiPath = "https://2023-engineer-camp.zeabur.app";
+let worksData = [];
+let pagesData = [];
+
+const data = {
+	type: "",
+	sort: 0,
+	page: 1,
+	search: "",
+};
+
+const cardList = document.querySelector(".card-list");
+const pagination = document.querySelector(".pagination");
+
+function getData({ type, sort, page, search }) {
+	const apiUrl = `${apiPath}/api/v1/works?sort=${sort}&page=${page}&${type ? `type=${type}&` : ""}${search ? `search=${search}` : ""}`;
+	axios.get(apiUrl).then((res) => {
+		worksData = res.data.ai_works.data;
+		pagesData = res.data.ai_works.page;
+
+		renderWorks();
+		renderPages(pagesData);
+	});
+}
+
+getData(data);
+
+// 渲染 AI 工具
+function renderWorks() {
+	let works = "";
+
+	worksData.forEach((item) => {
+		works += /*html*/`
+    <li class="card">
+      <div class="card-img">
+        <img src="${item.imageUrl}" alt="${item.title}">
+      </div>
+      <div class="card-content">
+        <div class="card-detail">
+          <div class="fs-h6">${item.title}</div>
+          <p class="fs-md">${item.description}</p>
+        </div>
+        <div class="card-info">
+          <div class="fs-lg">AI 模型</div>
+          <div class="author fs-lg">${item.model}</div>
+        </div>
+        <div class="card-share">
+          <a href=""><div class="fs-lg">${item.type}</div></a>
+          <a href=""><span class="material-icons">share</span></a>
+        </div>
+      </div>
+    </li>
+	</li>`;
+	});
+	cardList.innerHTML = works;
+}

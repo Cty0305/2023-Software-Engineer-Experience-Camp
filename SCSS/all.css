@@ -613,6 +613,7 @@ body a {
 .container-mid .container-mid-content .card-list .card .card-img img {
   display: block;
   transition: all 0.3s ease-out;
+  height: 300px;
 }
 .container-mid .container-mid-content .card-list .card .card-img img:hover {
   transform: scale(1.2);

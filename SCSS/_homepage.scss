@@ -575,6 +575,7 @@ body{
                     img{
                         display: block;
                         transition:all 0.3s ease-out;
+                        height: 300px;
                         &:hover{
                             transform:scale(1.2);
                             transition:all 0.3s ease-in;
