@@ -497,15 +497,12 @@ body{
                     text-align: center;
                     border-radius: 16px;
                     white-space: nowrap;
+                    cursor: pointer;
+                    color: $black-60;
+                    font-weight: 700;
                     &:hover{
                         background-color: $black-20;
-                        .fs-lg{
-                            color: $black-100;
-                        }
-                    }
-                    .fs-lg{
-                        color: $black-60;
-                        font-weight: 700;
+                        color: $black-100;
                     }
                 }
             }
@@ -560,8 +557,9 @@ body{
         .card-list{
             margin: 40px 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
+            gap:24px;
             .card{
                 display: flex;
                 flex-direction: column;

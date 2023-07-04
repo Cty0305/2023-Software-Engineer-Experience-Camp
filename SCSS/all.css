@@ -535,16 +535,13 @@ body a {
   text-align: center;
   border-radius: 16px;
   white-space: nowrap;
+  cursor: pointer;
+  color: #919191;
+  font-weight: 700;
 }
 .container-mid .container-mid-content .filter .filter-list .filter-item:hover {
   background-color: #f2f2f2;
-}
-.container-mid .container-mid-content .filter .filter-list .filter-item:hover .fs-lg {
   color: #020202;
-}
-.container-mid .container-mid-content .filter .filter-list .filter-item .fs-lg {
-  color: #919191;
-  font-weight: 700;
 }
 .container-mid .container-mid-content .filter .filter-selector-dropdown {
   position: relative;
@@ -595,8 +592,9 @@ body a {
 .container-mid .container-mid-content .card-list {
   margin: 40px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 24px;
 }
 .container-mid .container-mid-content .card-list .card {
   display: flex;
