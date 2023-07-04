@@ -147,7 +147,7 @@ function getData({ type, sort, page, search }) {
 		pagesData = res.data.ai_works.page;
 
 		renderWorks();
-		renderPages(pagesData);
+		// renderPages(pagesData);
 	});
 }
 
@@ -182,3 +182,24 @@ function renderWorks() {
 	});
 	cardList.innerHTML = works;
 }
+
+
+// 分類標籤切換
+const categories = document.querySelectorAll(".filter-list li");
+categories.forEach((item) => {
+	item.addEventListener("click", () => {
+		categories.forEach((category) => {
+			category.classList.remove("active");
+		});
+
+		if (item.textContent === "全部") {
+			data.type = "";
+			item.classList.add("active");
+		} else {
+			data.type = item.textContent;
+			item.classList.add("active");
+		}
+
+		getData(data);
+	});
+});
