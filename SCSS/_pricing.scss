@@ -1,254 +1,252 @@
-.container-top{
-    .kv{
-        .fs-h1{
-            margin-left: 50%;
-            max-width: 636px;
-            margin-top: 80px;
-            font-weight: 900;
-            margin-bottom: 238px;
-        }
+.container-top {
+  .kv {
+    .fs-h1 {
+      margin-left: 50%;
+      max-width: 636px;
+      margin-top: 80px;
+      font-weight: 900;
+      margin-bottom: 238px;
     }
-    .animation-price{
-        display: block;
-            justify-content: flex-start;
-            .grass-list{
-                .grass-item{
-                    overflow: hidden;
-                    img{
-                        position: relative; 
-                        animation: slide-up 3.5s ease-in-out infinite;
-                    }
-                    .grass1 {
-                        animation-delay: 0.5s;
-                    }
-                    
-                    .grass2 {
-                        animation-delay: 0.25s;
-                    }
-                    
-                    .grass3 {
-                        animation-delay: 0s;
-                    }
-                }
-            }
-    }
-    @keyframes slide-up {
-        0% {
-          transform: translateY(100%);
+  }
+  .animation-price {
+    display: block;
+    justify-content: flex-start;
+    .grass-list {
+      .grass-item {
+        overflow: hidden;
+        img {
+          position: relative;
+          animation: slide-up 3.5s ease-in-out infinite;
         }
-        50%{
-            transform: translateY(0%);
+        .grass1 {
+          animation-delay: 0.5s;
         }
-        100% {
-          transform: translateY(-100%);
+
+        .grass2 {
+          animation-delay: 0.25s;
+        }
+
+        .grass3 {
+          animation-delay: 0s;
         }
       }
-    .pricing{
-        margin: 160px 0;
-        .fs-h3{
-            margin-bottom: 80px;
-            font-weight: 900;
-        }
-        .pricing-card-list{
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap:24px;
-            .pricing-card{
-                border: 1px solid $black-80;
-                border-radius: 16px;
-                width: 634px;
-                &:hover{
-                    cursor:pointer;
-                    border: 1px solid $black-0;
-                }
-                .pricing-content{
-                    padding: 20px 32px;
-                    display: flex;
-                    flex-direction: column;
-                    border-bottom: 1px solid $black-80;
-                    height: 254px;
-                    .fs-h3{
-                        font-weight: 900;
-                        margin-bottom: 12px;
-                    }
-                    .description-list{
-                        .desctiption{
-                            color: $black-20;
-                            list-style-type: disc;
-                            margin-left: 32px;
-                        }
-                    }
-                }
-                .pricing-card-plan{
-                    padding: 20px 32px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    .price{
-                        font-weight: 900;
-                    }
-                    .price>span{
-                        color: $black-60;
-                    }
-                    a{
-                        display: flex;
-                        align-items: center;
-                        gap:12px;
-                        .fs-lg{
-                            font-weight: 700;
-                        }
-                    }
-                }
-            }
-        }
     }
-    .guideline{
+  }
+  @keyframes slide-up {
+    0% {
+      transform: translateY(100%);
+    }
+    50% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  .pricing {
+    margin: 160px 0;
+    .fs-h3 {
+      margin-bottom: 80px;
+      font-weight: 900;
+    }
+    .pricing-card-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      .pricing-card {
+        border: 1px solid $black-80;
+        border-radius: 16px;
+        width: 634px;
+        &:hover {
+          cursor: pointer;
+          border: 1px solid $black-0;
+        }
+        .pricing-content {
+          padding: 20px 32px;
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid $black-80;
+          height: 254px;
+          .fs-h3 {
+            font-weight: 900;
+            margin-bottom: 12px;
+          }
+          .description-list {
+            .desctiption {
+              color: $black-20;
+              list-style-type: disc;
+              margin-left: 32px;
+            }
+          }
+        }
+        .pricing-card-plan {
+          padding: 20px 32px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .price {
+            font-weight: 900;
+          }
+          .price > span {
+            color: $black-60;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .fs-lg {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+  .guideline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+    .fs-h3 {
+      font-weight: 900;
+    }
+    .guideline-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 856px;
+      gap: 24px;
+      .guideline-item {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 160px;
-        .fs-h3{
-            font-weight: 900;
+        flex-direction: column;
+        border-bottom: 1px solid $black-80;
+        padding-bottom: 40px;
+        gap: 24px;
+        .fs-h1 {
+          font-weight: 900;
         }
-        .guideline-list{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            max-width: 856px;
-            gap:24px;
-            .guideline-item{
-                display: flex;
-                flex-direction: column;
-                border-bottom: 1px solid $black-80;
-                padding-bottom: 40px;
-                gap:24px;
-                .fs-h1{
-                    font-weight: 900;
-                }
-                .fs-h3{
-                    font-weight: $regular;
-                }
-            }
+        .fs-h3 {
+          font-weight: $regular;
         }
+      }
     }
+  }
 }
 
-
-.container-bottom{
-    .faq{
-        margin: 158px 0 160px 0;
-        .faq-content{
-            display: flex;
-            justify-content: space-between;
-            .fs-h3{
-                font-weight: 900;
+.container-bottom {
+  .faq {
+    margin: 158px 0 160px 0;
+    .faq-content {
+      display: flex;
+      justify-content: space-between;
+      .fs-h3 {
+        font-weight: 900;
+      }
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 66%;
+        .faq-item {
+          display: flex;
+          gap: 20px;
+          padding: 20px 40px;
+          border: 1px solid $black-80;
+          border-radius: 16px;
+          .faq-text {
+            .question {
+              font-weight: 900;
             }
-            .faq-list{
-                display: flex;
-                flex-direction: column;
-                gap:16px;
-                width: 66%;
-                .faq-item{
-                    display: flex;
-                    gap:20px;
-                    padding: 20px 40px;
-                    border: 1px solid $black-80;
-                    border-radius: 16px;
-                    .faq-text{
-                        .question{
-                            font-weight: 900;
-                        }
-                        .answer{
-                            display: none;
-                        }
-                    }
-                    &:hover{
-                        cursor: pointer;
-                        border: 1px solid $black-0;
-                    }
-                }
-                .faq-item.clicked{
-                    border: 1px solid $black-0;
-                    border-radius: 16px;
-                    padding: 20px 40px; 
-                    display: flex;
-                    gap:20px;                 
-                    .faq-text{
-                        .question{
-                            margin-bottom: 16px;
-                        }
-                        .answer{
-                            display: block;
-                        }
-                    }
-                }
+            .answer {
+              display: none;
             }
+          }
+          &:hover {
+            cursor: pointer;
+            border: 1px solid $black-0;
+          }
         }
+        .faq-item.clicked {
+          border: 1px solid $black-0;
+          border-radius: 16px;
+          padding: 20px 40px;
+          display: flex;
+          gap: 20px;
+          .faq-text {
+            .question {
+              margin-bottom: 16px;
+            }
+            .answer {
+              display: block;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
-@media(max-width:767px){
-    .container-top{
-        .kv{
-            .kv-title{
-                margin: 40px 0 64px 0;
-            }
-            .fs-h1{
-                margin: 0 0 258px 94px;
-            }
-        }
-        .animation-price{
-            .grass-list{
-                .grass-item{
-                    display: flex;
-                    img{
-                        max-width: 117px;
-                        height: 117px;
-                    }
-                }
-                
-            }
-        }
-        .pricing{
-            margin: 120px 0;
-            .fs-mb-h6{
-                font-weight: $bold;
-                margin-bottom: 24px;
-            }
-            .pricing-card-list{
-                .pricing-card{
-                    width: 100%;
-                    .pricing-content{
-                        padding: 20px;
-                        height: 176px;
-                    }
-                    .pricing-card-plan{
-                        padding: 20px;
-                    }
-                }
-            }
-        }
-        .guideline{
-            display: block;
-            margin-bottom: 120px;
-            .guideline-title{
-                margin-bottom: 48px;
-            }
-        }
+@media (max-width: 767px) {
+  .container-top {
+    .kv {
+      .kv-title {
+        margin: 40px 0 64px 0;
+      }
+      .fs-h1 {
+        margin: 0 0 258px 94px;
+      }
     }
-    .container-bottom .faq{
-        margin: 120px 0;
-        .faq-content{
-            display: block;
-            .fs-mb-h6{
-                margin-bottom: 24px;
-            }
-            .faq-list{
-                width: 100%;
-                .faq-item{
-                    padding: 20px 40px;
-                }
-            }
+    .animation-price {
+      .grass-list {
+        .grass-item {
+          display: flex;
+          img {
+            max-width: 117px;
+            height: 117px;
+          }
         }
+      }
     }
+    .pricing {
+      margin: 120px 0;
+      .fs-mb-h6 {
+        font-weight: $bold;
+        margin-bottom: 24px;
+      }
+      .pricing-card-list {
+        .pricing-card {
+          width: 100%;
+          .pricing-content {
+            padding: 20px;
+            height: 176px;
+          }
+          .pricing-card-plan {
+            padding: 20px;
+          }
+        }
+      }
+    }
+    .guideline {
+      display: block;
+      margin-bottom: 120px;
+      .guideline-title {
+        margin-bottom: 48px;
+      }
+    }
+  }
+  .container-bottom .faq {
+    margin: 120px 0;
+    .faq-content {
+      display: block;
+      .fs-mb-h6 {
+        margin-bottom: 24px;
+      }
+      .faq-list {
+        width: 100%;
+        .faq-item {
+          padding: 20px 40px;
+        }
+      }
+    }
+  }
 }
