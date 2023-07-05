@@ -572,7 +572,7 @@ body{
                     img{
                         display: block;
                         transition:all 0.3s ease-out;
-                        height: 300px;
+                        max-width: 100%;
                         &:hover{
                             transform:scale(1.2);
                             transition:all 0.3s ease-in;
@@ -642,32 +642,14 @@ body{
                 justify-content: center;
                 width: 48px;
                 height: 48px;
-                border-radius: 16px;
+                border-radius: 16px;                
+                background-color: $black-0;
+                color:$black-100;
                 &:hover{
                     color: $black-0;
                     background-color: $black-100;
-                    >.fs-md{
-                        color: $black-0;
-                    }
-                    .material-icons{
-                        color: $black-0;
-                    }
-                }
-                .material-icons{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: $black-100;
-                    height: 48px;
-                    width: 48px;
                 }
             }
-            .fs-md{
-                font-weight: 700;
-                text-align: center; 
-                color: $black-100;
-            }
-            
         }   
     }
 }

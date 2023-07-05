@@ -183,6 +183,67 @@ function renderWorks() {
 	cardList.innerHTML = works;
 }
 
+// 渲染分頁數
+// const pageHandler = () => {
+//   let html = '';
+//   for (let i = 0; i < pageData.total_pages; i++) {
+//     html += `<li><a href="#" class="${
+//       i + 1 === Number(page) ? 'pagination-item fs-md' : ''
+//     }">${i + 1}</a></li>`;
+//   }
+
+//   pageData.has_next ? html += `<li>
+//             <a href="#tools" class="pagination-item fs-md">
+//             </a>
+//           </li>`: '';
+
+//   $('.pagination').html(html);
+// };
+
+// 下一頁
+// function nextPage(pagesData) {
+// 	const nextPage = document.querySelector(".nextPage");
+
+// 	nextPage.addEventListener("click", (e) => {
+// 		e.preventDefault();
+// 		data.page = Number(pagesData.current_page) + 1;
+// 		getData(data);
+
+// 		// 滑到搜尋區最上方
+// 		searches.forEach((search) => {
+// 			console.log(search);
+
+// 			search.scrollIntoView({ behavior: "smooth" });
+// 		});
+// 	});
+// }
+
+
+// 分頁選染至畫面
+// function renderPages(pagesData) {
+// 	let pageStr = "";
+// 	console.log(pagesData.has_pre);
+// 	console.log(pagesData.has_next);
+
+// 	for (let i = 1; i <= pagesData.total_pages; i += 1) {
+// 		pageStr += `
+//     <li><a href="#" class="pagination-item ${pagesData.current_page == i ? "active" : ""} ${
+// 			pagesData.current_page == i ? "disabled" : ""
+// 		}" data-page="${i}">${i}</a>
+// 	</li>`;
+// 	}
+
+// 	pageStr += `
+// 	<li><a href="" class="pagination-item  nextPage material-icons">keyboard_arrow_right</a></li>`;
+
+// 	console.log(pageStr);
+
+// 	pagination.innerHTML = pageStr;
+
+// 	changePage();
+// 	nextPage(pagesData);
+// }
+
 
 // 分類標籤切換
 const categories = document.querySelectorAll(".filter-list li");
@@ -194,10 +255,8 @@ categories.forEach((item) => {
 
 		if (item.textContent === "全部") {
 			data.type = "";
-			item.classList.add("active");
 		} else {
 			data.type = item.textContent;
-			item.classList.add("active");
 		}
 
 		getData(data);

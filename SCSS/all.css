@@ -610,7 +610,7 @@ body a {
 .container-mid .container-mid-content .card-list .card .card-img img {
   display: block;
   transition: all 0.3s ease-out;
-  height: 300px;
+  max-width: 100%;
 }
 .container-mid .container-mid-content .card-list .card .card-img img:hover {
   transform: scale(1.2);
@@ -679,29 +679,12 @@ body a {
   width: 48px;
   height: 48px;
   border-radius: 16px;
+  background-color: #ffffff;
+  color: #020202;
 }
 .container-mid .container-mid-content .pagination .pagination-item:hover {
   color: #ffffff;
   background-color: #020202;
-}
-.container-mid .container-mid-content .pagination .pagination-item:hover > .fs-md {
-  color: #ffffff;
-}
-.container-mid .container-mid-content .pagination .pagination-item:hover .material-icons {
-  color: #ffffff;
-}
-.container-mid .container-mid-content .pagination .pagination-item .material-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #020202;
-  height: 48px;
-  width: 48px;
-}
-.container-mid .container-mid-content .pagination .fs-md {
-  font-weight: 700;
-  text-align: center;
-  color: #020202;
 }
 
 .container-bottom {
