@@ -1,14 +1,14 @@
-
-.menu{
-    height: 70vh;    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:8px;
-    padding: 192px 107px;
+.menu {
+  margin: 0 auto;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .menu-group .menu-list a {
+    text-align: center;
+  }
 }
-.container-bottom .footer .footermenu-bottom .menu-backtotop{
-    display: none;
+.container-bottom .footer .footermenu-bottom .menu-backtotop {
+  display: none;
 }
-

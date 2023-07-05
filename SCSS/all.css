@@ -52,7 +52,9 @@ table {
   border-spacing: 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -71,7 +73,15 @@ body a {
   display: inline-block;
 }
 
-.fs-d1, .fs-d2, .fs-d3, .fs-h1, .fs-h2, .fs-h3, .fs-h4, .fs-h5, .fs-h6 {
+.fs-d1,
+.fs-d2,
+.fs-d3,
+.fs-h1,
+.fs-h2,
+.fs-h3,
+.fs-h4,
+.fs-h5,
+.fs-h6 {
   font-weight: 900;
   line-height: 1.2;
 }
@@ -140,7 +150,12 @@ body a {
 }
 
 @media (max-width: 768px) {
-  .fs-mb-h1, .fs-mb-h2, .fs-mb-h3, .fs-mb-h4, .fs-mb-h5, .fs-mb-h6 {
+  .fs-mb-h1,
+  .fs-mb-h2,
+  .fs-mb-h3,
+  .fs-mb-h4,
+  .fs-mb-h5,
+  .fs-mb-h6 {
     font-weight: 900;
     line-height: 1.2;
   }
@@ -206,15 +221,15 @@ body a {
 .container-top .navbar .logo h1 {
   display: none;
 }
-.container-top .navbar .menulist {
+.container-top .navbar .menu-list {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-.container-top .navbar .menulist a {
+.container-top .navbar .menu-list a {
   display: block;
 }
-.container-top .navbar .menulist .fs-lg {
+.container-top .navbar .menu-list .fs-lg {
   font-weight: 700;
 }
 .container-top .navbar a {
@@ -724,12 +739,12 @@ body a {
   justify-content: space-between;
   padding: 80px 0;
 }
-.container-bottom .footer .footermenu-top .footer-menulist {
+.container-bottom .footer .footermenu-top .footermenu-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.container-bottom .footer .footermenu-top .footer-menulist .footer-menuitem {
+.container-bottom .footer .footermenu-top .footermenu-list .footermenu-item {
   font-weight: 900;
   color: #ffffff;
 }
@@ -787,7 +802,7 @@ body a {
   .container-top .navbar {
     height: 80px;
   }
-  .container-top .navbar .menulist {
+  .container-top .navbar .menu-list {
     display: none;
   }
   .container-top .navbar a {
@@ -1154,13 +1169,15 @@ body a {
   }
 }
 .menu {
+  margin: 0 auto;
   height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  padding: 192px 107px;
+}
+.menu .menu-group .menu-list a {
+  text-align: center;
 }
 
 .container-bottom .footer .footermenu-bottom .menu-backtotop {

@@ -174,7 +174,7 @@ body {
         display: none;
       }
     }
-    .menulist {
+    .menu-list {
       display: flex;
       justify-content: space-between;
       gap: 20px;
@@ -737,11 +737,11 @@ body {
       display: flex;
       justify-content: space-between;
       padding: 80px 0;
-      .footer-menulist {
+      .footermenu-list {
         display: flex;
         flex-direction: column;
         gap: 8px;
-        .footer-menuitem {
+        .footermenu-item {
           font-weight: $bold;
           color: $black-0;
         }
@@ -803,7 +803,7 @@ body {
     padding: 0 12px;
     .navbar {
       height: 80px;
-      .menulist {
+      .menu-list {
         display: none;
       }
       a {
