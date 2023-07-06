@@ -558,6 +558,10 @@ body a {
   background-color: #f2f2f2;
   color: #020202;
 }
+.container-mid .container-mid-content .filter .filter-list .filter-item.active {
+  background-color: #f2f2f2;
+  color: #020202;
+}
 .container-mid .container-mid-content .filter .filter-selector-dropdown {
   position: relative;
 }
@@ -940,6 +944,16 @@ body a {
   }
   .container-bottom .footer .footermenu-bottom .backtotop {
     margin-bottom: 12px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .container-bottom .footer .footermenu-bottom .backtotop {
+    order: 2;
+  }
+}
+@media (max-width: 767px) and (max-width: 518px) {
+  .container-bottom .footer .footermenu-bottom .backtotop {
+    order: 0;
   }
 }
 .container-top .kv .fs-h1 {

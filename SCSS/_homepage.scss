@@ -550,6 +550,10 @@ body {
             color: $black-100;
           }
         }
+        .filter-item.active {
+          background-color: $black-20;
+          color: $black-100;
+        }
       }
       .filter-selector-dropdown {
         position: relative;
@@ -941,6 +945,12 @@ body {
         }
         .backtotop {
           margin-bottom: 12px;
+          @media (max-width: 767px) {
+            order: 2;
+          }
+          @media (max-width: 518px) {
+            order: 0;
+          }
         }
       }
     }
