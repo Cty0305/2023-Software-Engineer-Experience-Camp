@@ -1,34 +1,30 @@
 .container-top {
-  .kv {
-    .fs-h1 {
-      margin-left: 50%;
-      max-width: 636px;
-      margin-top: 80px;
-      font-weight: 900;
-      margin-bottom: 238px;
-    }
+  .kv .fs-h1 {
+    margin-left: 50%;
+    max-width: 636px;
+    margin-top: 80px;
+    font-weight: 900;
+    margin-bottom: 238px;
   }
   .animation-price {
     display: block;
     justify-content: flex-start;
-    .grass-list {
-      .grass-item {
-        overflow: hidden;
-        img {
-          position: relative;
-          animation: slide-up 3.5s ease-in-out infinite;
-        }
-        .grass1 {
-          animation-delay: 0.5s;
-        }
+    .grass-list .grass-item {
+      overflow: hidden;
+      img {
+        position: relative;
+        animation: slide-up 3.5s ease-in-out infinite;
+      }
+      .grass1 {
+        animation-delay: 0.5s;
+      }
 
-        .grass2 {
-          animation-delay: 0.25s;
-        }
+      .grass2 {
+        animation-delay: 0.25s;
+      }
 
-        .grass3 {
-          animation-delay: 0s;
-        }
+      .grass3 {
+        animation-delay: 0s;
       }
     }
   }
@@ -72,12 +68,10 @@
             font-weight: 900;
             margin-bottom: 12px;
           }
-          .description-list {
-            .desctiption {
-              color: $black-20;
-              list-style-type: disc;
-              margin-left: 32px;
-            }
+          .description-list .desctiption {
+            color: $black-20;
+            list-style-type: disc;
+            margin-left: 32px;
           }
         }
         .pricing-card-plan {
@@ -197,13 +191,11 @@
       }
     }
     .animation-price {
-      .grass-list {
-        .grass-item {
-          display: flex;
-          img {
-            max-width: 117px;
-            height: 117px;
-          }
+      .grass-list .grass-item {
+        display: flex;
+        img {
+          max-width: 117px;
+          height: 117px;
         }
       }
     }
@@ -213,16 +205,14 @@
         font-weight: $bold;
         margin-bottom: 24px;
       }
-      .pricing-card-list {
-        .pricing-card {
-          width: 100%;
-          .pricing-content {
-            padding: 20px;
-            height: 176px;
-          }
-          .pricing-card-plan {
-            padding: 20px;
-          }
+      .pricing-card-list .pricing-card {
+        width: 100%;
+        .pricing-content {
+          padding: 20px;
+          height: 176px;
+        }
+        .pricing-card-plan {
+          padding: 20px;
         }
       }
     }

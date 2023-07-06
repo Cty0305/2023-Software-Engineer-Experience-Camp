@@ -216,24 +216,22 @@ body {
   .animation {
     display: flex;
     justify-content: flex-end;
-    .grass-list {
-      .grass-item {
-        overflow: hidden;
-        img {
-          position: relative;
-          animation: slide-up 3.5s ease-in-out infinite;
-        }
-        .grass1 {
-          animation-delay: 0.5s;
-        }
+    .grass-list .grass-item {
+      overflow: hidden;
+      img {
+        position: relative;
+        animation: slide-up 3.5s ease-in-out infinite;
+      }
+      .grass1 {
+        animation-delay: 0.5s;
+      }
 
-        .grass2 {
-          animation-delay: 0.25s;
-        }
+      .grass2 {
+        animation-delay: 0.25s;
+      }
 
-        .grass3 {
-          animation-delay: 0s;
-        }
+      .grass3 {
+        animation-delay: 0s;
       }
     }
   }
@@ -357,13 +355,11 @@ body {
         &.logo-group-bottom {
           animation: carousel-reverse 20s linear infinite;
         }
-        .logo {
-          img {
-            position: relative;
-            z-index: -1;
-            max-width: 160px;
-            height: 40px;
-          }
+        .logo img {
+          position: relative;
+          z-index: -1;
+          max-width: 160px;
+          height: 40px;
         }
       }
     }
@@ -486,10 +482,10 @@ body {
           display: flex;
           align-items: center;
           gap: 12px;
+          cursor: pointer;
           &:hover {
             border: 1px solid $black-100;
           }
-          cursor: pointer;
           .fs-lg {
             color: $black-100;
             font-weight: $regular;
@@ -818,17 +814,14 @@ body {
         max-width: 252px;
       }
     }
-    .animation {
-      .grass-list {
-        .grass-item {
-          display: flex;
-          img {
-            max-width: 117px;
-            height: 117px;
-          }
-        }
+    .animation .grass-list .grass-item {
+      display: flex;
+      img {
+        max-width: 117px;
+        height: 117px;
       }
     }
+
     .our-service {
       margin: 120px 0;
       .service-title {
@@ -874,16 +867,8 @@ body {
           }
         }
       }
-      .testimonial-area {
-        .testimonial-content {
-          .testimonial-list {
-            .testimonial-card {
-              .quote {
-                margin-bottom: 20px;
-              }
-            }
-          }
-        }
+      .testimonial-area.testimonial-content.testimonial-list.testimonial-card.quote {
+        margin-bottom: 20px;
       }
     }
   }
@@ -951,7 +936,7 @@ body {
           margin-right: 0;
         }
         .socialmedia-menu {
-          order: 2;
+          order: 1;
           margin-bottom: 12px;
         }
         .backtotop {
