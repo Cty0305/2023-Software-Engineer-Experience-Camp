@@ -705,6 +705,10 @@ body a {
   color: #ffffff;
   background-color: #020202;
 }
+.container-mid .container-mid-content .pagination .pagination-item.active {
+  color: #ffffff;
+  background-color: #020202;
+}
 
 .container-bottom {
   max-width: 1326px;

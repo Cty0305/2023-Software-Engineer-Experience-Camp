@@ -97,6 +97,18 @@ $(document).ready(function () {
     });
   });
 
+  // 點擊pagination-item 加.active icon变回"add"
+  $(".pagination-item").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+    } else {
+      $(".pagination-item.active").removeClass("active");
+      $(this).addClass("active");
+    }
+  });
+
   // FAQ區塊
 
   // 點擊faq-item 加.clicked icon变回"add"
@@ -108,7 +120,6 @@ $(document).ready(function () {
     } else {
       $(".faq-item.clicked").removeClass("clicked");
       $(".faq-item .material-icons").text("add");
-
       $(this).addClass("clicked");
       $(this).find(".material-icons").text("remove");
     }
@@ -232,4 +243,3 @@ categories.forEach((item) => {
 //       getData(data);
 //     });
 //   });
-// }

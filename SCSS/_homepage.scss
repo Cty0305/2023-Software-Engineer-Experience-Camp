@@ -698,6 +698,10 @@ body {
           background-color: $black-100;
         }
       }
+      .pagination-item.active {
+        color: $black-0;
+        background-color: $black-100;
+      }
     }
   }
 }
