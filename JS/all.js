@@ -148,7 +148,8 @@ $(document).ready(function () {
 });
 
 // 資料串接
-const apiPath = "https://2023-engineer-camp.zeabur.app";
+const apiPath =
+  "https://raw.githubusercontent.com/alanchou0305/AI-Tool-King/65343a200adef60ec960ee2c8038546aa739fe3b/tools.json";
 let worksData = [];
 let pagesData = [];
 
@@ -163,7 +164,7 @@ const cardList = document.querySelector(".card-list");
 const pagination = document.querySelector(".pagination");
 
 function getData({ type, sort, page, search }) {
-  const apiUrl = `${apiPath}/api/v1/works?sort=${sort}&page=${page}&${
+  const apiUrl = `${apiPath}?sort=${sort}&page=${page}&${
     type ? `type=${type}&` : ""
   }${search ? `search=${search}` : ""}`;
   axios.get(apiUrl).then((res) => {
@@ -201,8 +202,7 @@ function renderWorks() {
           <a href=""><span class="material-icons">share</span></a>
         </div>
       </div>
-    </li>
-	</li>`;
+    </li>`;
   });
   cardList.innerHTML = works;
 }
