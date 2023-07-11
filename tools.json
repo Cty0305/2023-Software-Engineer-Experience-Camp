@@ -1,0 +1,25 @@
+{
+  "status": true,
+  "ai_works": {
+    "page": {
+      "total_pages": 1,
+      "current_page": 1,
+      "has_pre": false,
+      "has_next": false
+    },
+    "data": [
+      {
+        "create_time": 1684117060056,
+        "description": "是一個寶可夢猜謎遊戲，提供寶可夢詳細特徵讓 AI 判斷是在描述哪一隻寶可夢。",
+        "discordId": "穎旻#2672",
+        "id": "-NVSBjaEYBX-kwFTk6wN",
+        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/4cb81e60-4c6c-4eaf-8cc2-84a61ec3c0e9.jpg?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756646400&Signature=njDv15%2Bc1bA7sI4EhnKYuI2ZCwAeqhKsFR78oct6PD79UQhPX0e7G5r0%2BIO4UmTgFNeQ6Z35o8XWhBYHvq83r8UZvpR2SGlJZ4X2MPY91vBT0jrQa3DBL4m7DxP01M4y0h2d%2FvzBvFaKh8zgiUrwKqZtbahRklepcCTdqqvYmLUHCzegQKs65vqwQDmR5wzEYNYmEo8oFsVfFv1FY5sqCjpCQ2asVvUPFEh9V27mG53JnoQibJOMzcM7%2FvSp3xOpbl%2BioUqcjn3GLOjo4mcrVDf%2FpUpPWbo1JCEbTfGNagWDMFUl15e8XVcbS1W5zhVsQmbm%2FY0w33d5%2FQkpltPlgA%3D%3D",
+        "link": "https://2023-engineer-camp-ai-template.vercel.app/",
+        "model": "gpt3.5",
+        "title": "猜猜我是誰",
+        "type": "問答服務",
+        "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
+      }
+    ]
+  }
+}
