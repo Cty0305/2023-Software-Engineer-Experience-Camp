@@ -208,7 +208,7 @@ function renderWorks() {
 }
 
 // 分類標籤切換
-const categories = document.querySelectorAll(".filter-list li");
+const categories = document.querySelectorAll(".filter-item");
 categories.forEach((item) => {
   item.addEventListener("click", () => {
     categories.forEach((category) => {
