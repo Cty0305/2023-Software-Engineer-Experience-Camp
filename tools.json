@@ -22,74 +22,14 @@
       },
       {
         "create_time": 1684117060057,
-        "description": "花花公子帥章魚",
+        "description": "基本上是怪人一個",
         "discordId": "東東#8787",
         "id": "-NVSBjaEYBX-kwFTk6wB",
         "imageUrl": "https://raw.githubusercontent.com/alanchou0305/AI-Tool-King/main/Image/%E8%8A%B1%E8%8A%B1%E5%85%AC%E5%AD%90%E5%B8%A5%E7%AB%A0%E9%AD%9A.jpg",
         "link": "https://www.instagram.com/koatony_0619/",
         "model": "gpt4",
-        "title": "基本上是怪人一個",
+        "title": "花花公子帥章魚",
         "type": "職業軍人",
-        "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
-      },
-      {
-        "create_time": 1684117060058,
-        "description": "是一個寶可夢猜謎遊戲，提供寶可夢詳細特徵讓 AI 判斷是在描述哪一隻寶可夢。",
-        "discordId": "穎旻#2672",
-        "id": "-NVSBjaEYBX-kwFTk6wB",
-        "imageUrl": "https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool3.png?raw=true",
-        "link": "https://2023-engineer-camp-ai-template.vercel.app/",
-        "model": "gpt4",
-        "title": "猜猜你是誰",
-        "type": "程式知識",
-        "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
-      },
-      {
-        "create_time": 1684117060058,
-        "description": "是一個寶可夢猜謎遊戲，提供寶可夢詳細特徵讓 AI 判斷是在描述哪一隻寶可夢。",
-        "discordId": "穎旻#2672",
-        "id": "-NVSBjaEYBX-kwFTk6wB",
-        "imageUrl": "https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool4.png?raw=true",
-        "link": "https://2023-engineer-camp-ai-template.vercel.app/",
-        "model": "gpt4",
-        "title": "猜猜你是誰",
-        "type": "程式知識",
-        "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
-      },
-      {
-        "create_time": 1684117060058,
-        "description": "是一個寶可夢猜謎遊戲，提供寶可夢詳細特徵讓 AI 判斷是在描述哪一隻寶可夢。",
-        "discordId": "穎旻#2672",
-        "id": "-NVSBjaEYBX-kwFTk6wB",
-        "imageUrl": "https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool5.png?raw=true",
-        "link": "https://2023-engineer-camp-ai-template.vercel.app/",
-        "model": "gpt4",
-        "title": "猜猜你是誰",
-        "type": "程式知識",
-        "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
-      },
-      {
-        "create_time": 1684117060058,
-        "description": "是一個寶可夢猜謎遊戲，提供寶可夢詳細特徵讓 AI 判斷是在描述哪一隻寶可夢。",
-        "discordId": "穎旻#2672",
-        "id": "-NVSBjaEYBX-kwFTk6wB",
-        "imageUrl": "https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool6.png?raw=true",
-        "link": "https://2023-engineer-camp-ai-template.vercel.app/",
-        "model": "gpt4",
-        "title": "猜猜你是誰",
-        "type": "程式知識",
-        "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
-      },
-      {
-        "create_time": 1684117060058,
-        "description": "是一個寶可夢猜謎遊戲，提供寶可夢詳細特徵讓 AI 判斷是在描述哪一隻寶可夢。",
-        "discordId": "穎旻#2672",
-        "id": "-NVSBjaEYBX-kwFTk6wB",
-        "imageUrl": "https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool3.png?raw=true",
-        "link": "https://2023-engineer-camp-ai-template.vercel.app/",
-        "model": "gpt4",
-        "title": "猜猜你是誰",
-        "type": "程式知識",
         "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
       }
     ]
