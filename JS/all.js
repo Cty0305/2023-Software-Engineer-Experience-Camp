@@ -195,10 +195,10 @@ function renderWorks() {
         </div>
         <div class="card-info">
           <div class="fs-lg">AI 模型</div>
-          <div class="author fs-lg">${item.model}</div>
+          <div class="author fs-lg">${item.discordId}</div>
         </div>
         <div class="card-share">
-          <a href=""><div class="fs-lg">${item.type}</div></a>
+          <a href="${item.link}"><div class="fs-lg">${item.type}</div></a>
           <a href=""><span class="material-icons">share</span></a>
         </div>
       </div>
