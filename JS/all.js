@@ -93,7 +93,12 @@ $(document).ready(function () {
   filterItems.forEach((item) => {
     item.addEventListener("click", function () {
       // 切换.active类的存在
-      this.classList.toggle("active");
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+      } else {
+        $(".filter-item.active").removeClass("active");
+        $(this).addClass("active");
+      }
     });
   });
 
@@ -172,7 +177,7 @@ function getData({ type, sort, page, search }) {
     pagesData = res.data.ai_works.page;
 
     renderWorks();
-    // renderPages(pagesData);
+    renderPages(pagesData);
   });
 }
 
@@ -208,13 +213,12 @@ function renderWorks() {
 }
 
 // 分類標籤切換
-const categories = document.querySelectorAll(".filter-item");
+const categories = document.querySelectorAll(".filter-list li");
 categories.forEach((item) => {
   item.addEventListener("click", () => {
     categories.forEach((category) => {
       category.classList.remove("active");
     });
-
     if (item.textContent === "全部") {
       data.type = "";
     } else {
@@ -224,22 +228,3 @@ categories.forEach((item) => {
     getData(data);
   });
 });
-
-// 切換分頁
-// function changePage(pagesData) {
-//   const pageLinks = document.querySelectorAll(".pagination-item");
-//   let pageId = "";
-
-//   pageLinks.forEach((item) => {
-//     item.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       pageId = e.target.dataset.page;
-//       data.page = Number(pageId);
-
-//       if (!pageId) {
-//         data.page = Number(pagesData.current_page) + 1;
-//       }
-
-//       getData(data);
-//     });
-//   });
