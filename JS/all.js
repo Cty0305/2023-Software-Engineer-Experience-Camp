@@ -155,6 +155,9 @@ $(document).ready(function () {
 // 資料串接
 const apiPath =
   "https://raw.githubusercontent.com/alanchou0305/AI-Tool-King/main/tools.json";
+const cardList = document.querySelector(".card-list");
+const pagination = document.querySelector(".pagination");
+
 let worksData = [];
 let pagesData = [];
 
@@ -165,19 +168,17 @@ const data = {
   search: "",
 };
 
-const cardList = document.querySelector(".card-list");
-const pagination = document.querySelector(".pagination");
-
 function getData({ type, sort, page, search }) {
   const apiUrl = `${apiPath}?sort=${sort}&page=${page}&${
     type ? `type=${type}&` : ""
   }${search ? `search=${search}` : ""}`;
+
   axios.get(apiUrl).then((res) => {
     worksData = res.data.ai_works.data;
     pagesData = res.data.ai_works.page;
 
+    console.log(res.data);
     renderWorks();
-    renderPages(pagesData);
   });
 }
 
@@ -216,9 +217,6 @@ function renderWorks() {
 const categories = document.querySelectorAll(".filter-list li");
 categories.forEach((item) => {
   item.addEventListener("click", () => {
-    categories.forEach((category) => {
-      category.classList.remove("active");
-    });
     if (item.textContent === "全部") {
       data.type = "";
     } else {
