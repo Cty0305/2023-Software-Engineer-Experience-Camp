@@ -179,6 +179,7 @@ function getData({ type, sort, page, search }) {
 
     console.log(res.data);
     renderWorks();
+    renderPages(pagesData);
   });
 }
 
@@ -211,6 +212,109 @@ function renderWorks() {
     </li>`;
   });
   cardList.innerHTML = works;
+}
+
+// 切換分頁
+const searches = document.querySelectorAll(".container-mid");
+
+function changePage() {
+  const pageLinks = document.querySelectorAll(".pagination-item");
+  let pageId = "";
+
+  pageLinks.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      pageId = e.target.dataset.page;
+      data.page = Number(pageId);
+      getData(data);
+
+      // 滑到搜尋區最上方
+      searches.forEach((search) => {
+        console.log(search);
+
+        search.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  });
+}
+
+// 上一頁
+function prePage(pagesData) {
+  const prePage = document.querySelector(".prePage");
+
+  prePage.addEventListener("click", (e) => {
+    e.preventDefault();
+    data.page = Number(pagesData.current_page) - 1;
+    getData(data);
+
+    // 滑到搜尋區最上方
+    searches.forEach((search) => {
+      console.log(search);
+
+      search.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}
+
+// 下一頁
+function nextPage(pagesData) {
+  const nextPage = document.querySelector(".nextPage");
+
+  nextPage.addEventListener("click", (e) => {
+    e.preventDefault();
+    data.page = Number(pagesData.current_page) + 1;
+    getData(data);
+
+    // 滑到搜尋區最上方
+    searches.forEach((search) => {
+      console.log(search);
+
+      search.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}
+
+// 分頁選染至畫面
+function renderPages(pagesData) {
+  let pageStr = "";
+  console.log(pagesData.has_pre);
+  console.log(pagesData.has_next);
+
+  pageStr += `
+	<li>
+		<a href="#" class="prePage material-icons${
+      pagesData.has_pre ? "" : "disabled"
+    } ">
+				keyboard_arrow_left
+		</a>
+	</li>`;
+
+  for (let i = 1; i <= pagesData.total_pages; i += 1) {
+    pageStr += `<li>
+		<a href="#" class="pagination-item fs-md ${
+      pagesData.current_page == i ? "active" : ""
+    } ${
+      pagesData.current_page == i ? "disabled" : ""
+    }" data-page="${i}">${i}</a>
+	</li>`;
+  }
+
+  pageStr += `
+	<li>
+		<a href="#" class="nextPage material-icons${
+      pagesData.has_next ? "" : "disabled "
+    }">
+				keyboard_arrow_right
+		</a>
+	</li>`;
+
+  console.log(pageStr);
+
+  pagination.innerHTML = pageStr;
+
+  changePage();
+  prePage(pagesData);
+  nextPage(pagesData);
 }
 
 // 分類標籤切換
