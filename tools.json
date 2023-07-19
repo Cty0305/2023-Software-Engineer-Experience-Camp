@@ -4,7 +4,7 @@
     "page": {
       "total_pages": 2,
       "current_page": 1,
-      "has_pre": true,
+      "has_pre": false,
       "has_next": true
     },
     "data": [
@@ -43,95 +43,40 @@
         "title": "奶昔大哥本人",
         "type": "飢餓猛獸",
         "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
-      },
+      }
+    ]
+  },
+  "ai_works_page_2": {
+    "page": {
+      "total_pages": 2,
+      "current_page": 2,
+      "has_pre": true,
+      "has_next": false
+    },
+    "data": [
       {
-        "create_time": 1684220568545,
-        "description": "是一個寶可夢猜謎遊戲，提供寶可夢詳細特徵讓 AI 判斷是在描述哪一隻寶可夢。",
-        "discordId": "穎旻#2672",
-        "id": "-NVYMaDC52uOvk1GlFuF",
-        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/de7ab502-20b4-4bc7-ac6e-8c87fe639e54.jpg?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=Px9Th2kvKhlikNnaEK%2F94RYFV8RZaC1mDJ1W4ws6bB2mIGh5pfRLhPWyR3w3B1B8ztP0Rh0d%2F6VW%2FkdIT94oJsfp%2FKtVDtJumKuJjftw1YJzwOjF%2F%2BT7LNIinqGKsdeWJF1yvscXy%2F%2BrsnhxSZTLhXIa1ypqtzoAqEpDd1SBN4FnN7hFlOXHS8nGfN3KQlYd4vzfLnbXRrpnVv6JWiIhTpgy8hqmApgkaEa8tiAj5VyctAnZUvq6JtSRyhCifdHKSOSCV8eGCSLuE1bb7MVHv8U4DafT6DQybPgD8QZszJYYKzin80cIR83UiUUDQ4imlTidR5r8cdivTQd1U4gNVA%3D%3D",
-        "link": "https://2023-engineer-camp-ai-tool.vercel.app/",
+        "create_time": 1684117060056,
+        "description": "攝影師",
+        "discordId": "星舟#8787",
+        "id": "-NVSBjaEYBX-kwFTk6wN",
+        "imageUrl": "https://raw.githubusercontent.com/alanchou0305/AI-Tool-King/main/Image/%E6%9E%97%E6%98%9F%E6%B4%B2%E6%89%8B%E6%96%B7%E6%8E%89.jpg",
+        "link": "https://www.instagram.com/daniel890629/",
         "model": "gpt3.5",
-        "status": false,
-        "title": "猜猜我是誰",
-        "type": "問答服務",
+        "title": "學分精算師",
+        "type": "日系潮男",
         "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
       },
       {
-        "create_time": 1685603820212,
-        "description": "輸入想畫的主題，並讓AI幫你豐富內容，可以輕鬆得到高品質AI繪圖。",
-        "discordId": "銀光菇#1692",
-        "id": "-NWpoH8_NPaF5rFGG3sG",
-        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/716106d3-7c6e-405e-bc46-20daa688d509.png?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=mGAUb8lwbug2MQOkp32tB8HKzIiP5Q%2BiUi7jeRNvBajDO8nhNhnCY2wTyHPkyqMZSNuI8QEm1JrowvJh3wTGXE%2FeLT1cEhofReP4mq6a7rZm4fPStdshVT71PdFSJFV8WR3gvLSow8OVx1Kgdz3u0DHX1O%2FtuhjoPOaaIOUjrhPR2jb2zTVsL7BYFMLHy4v98O6jUQ%2BsRs2YKuKNwlkHLlwSsE7vnyh6KF71aUqPqWNvoVwGFzvF4uy8jb48vBPhWK6any92YrKevj8cMmn4D%2BYMMoUPRC0MtVEQQtv0cdyGy35H%2BdJVyrKGjHw8TlrjMT8Q3dtsJww6lg%2F6JjqTmg%3D%3D",
-        "link": "https://2023-engineer-camp-ai-sdprompt-gingene.vercel.app/",
-        "model": "gpt3.5",
-        "status": true,
-        "title": "stable diffusion prompt 生產器",
-        "type": "問答服務",
-        "userId": "b4T1jkqhVDZ3wxz19QSUs6m4wT12"
-      },
-      {
-        "create_time": 1685611239521,
-        "description": "可以猜出任何你想的人物的猜謎精靈。",
-        "discordId": "Quantum#6093",
-        "id": "-NWqF_VG_J2THSQT7vtR",
-        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/6e42e2bd-1321-4c1e-8978-a9b6b410ee12.jpg?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=gsUf6d5KN3LEABdGIZFBCPAlo4ditoJgTSNpyq95uTgeRHJGBPHVxI6yG8pLCMPqvYqaMJk1gVsFpT1Ibe0hTdU6e%2BNaMlp%2BJqzy1ZY54ZwNKsYX7U3hTNpdKk3C3VRFgwxcub6oroLJI0cqjPBVGDnG3J6R8aKbsGUi9KfNivTlwblQPI7YlEnNhsMHkfrPYnKdENMH8jvHVFP26SKLoGKlGdVzygMam4gfuVQRtSnoOuDiPRqtJGmaFw%2BOm1PwHau%2Bk3HjpAVpNITrul2M3U69kXD2F%2BDwetHf1pzn6V7SsA6VIcXPo52e77wUgz2i0Ims%2BZVpCA9%2BmvJAsEs1yA%3D%3D",
-        "link": "https://akinator-sepia.vercel.app/",
-        "model": "gpt3.5",
-        "status": true,
-        "title": "Akinator",
-        "type": "問答服務",
-        "userId": "O9QWgK3J0cPn9GmckqB82GwkN562"
-      },
-      {
-        "create_time": 1685623479915,
-        "description": "和二次元角色對話，輸入完文字會卡一下子為正常",
-        "discordId": "楓之聲#6945",
-        "id": "-NWqzGsRCN-pe_LwzHu0",
-        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/bd43b70b-8f88-4ecc-bbbd-93d4fb927941.png?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=TmUbONsBJHUk9MRbrlC1prw7AEZGmWOYj699qv7%2F6sWQnlJK3oWbzmadTdHHm%2Fd%2BZuADZpPQ6t17%2F46R4rkI%2Fgntil9X23hsxEYqIH3t0Ih8GC150UChd%2BSyaRbu%2BEaPq%2Bo3vIx6PBGfJoti92YRzzRbnu4XnPWt4w%2FJVsPIUS9sgTajB6PW1I59Vyn41yVJITHcPHi%2BMNrgE%2FDrG5wi1GcpGfXa2AhsAkQE0K7xTRv4CZtX4i1FFHYLpDORFqBUYxh7b9OTSzqCyWVT98OYrMfhkezwixt2b%2BYkgC%2F8T1scWly8%2FUamDdLTGbR9upcDfGPRmGBjfcc8EZUkkyKLKg%3D%3D",
-        "link": "https://2023-engineer-camp-dj4w.vercel.app",
-        "model": "gpt3.5",
-        "status": true,
-        "title": "路人超能100-靈幻新隆",
-        "type": "問答服務",
-        "userId": "7BADcXhoWNYzgYqC0b7GrNyxPyp1"
-      },
-      {
-        "status": true,
-        "ai_works": {
-          "page": {
-            "total_pages": 2,
-            "current_page": 2,
-            "has_pre": true,
-            "has_next": true
-          },
-          "data": [
-            {
-              "create_time": 1684117060056,
-              "description": "攝影師",
-              "discordId": "星舟#8787",
-              "id": "-NVSBjaEYBX-kwFTk6wN",
-              "imageUrl": "https://raw.githubusercontent.com/alanchou0305/AI-Tool-King/main/Image/%E6%9E%97%E6%98%9F%E6%B4%B2%E6%89%8B%E6%96%B7%E6%8E%89.jpg",
-              "link": "https://www.instagram.com/daniel890629/",
-              "model": "gpt3.5",
-              "title": "學分精算師",
-              "type": "日系潮男",
-              "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
-            },
-            {
-              "create_time": 1684117060057,
-              "description": "基本上是怪人一個",
-              "discordId": "東東#8787",
-              "id": "-NVSBjaEYBX-kwFTk6wB",
-              "imageUrl": "https://github.com/alanchou0305/AI-Tool-King/blob/main/Image/%E9%99%B3%E8%8F%8A%E5%8B%95.jpg?raw=true",
-              "link": "https://www.instagram.com/koatony_0619/",
-              "model": "gpt4",
-              "title": "花花公子帥章魚",
-              "type": "職業軍人",
-              "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
-            }
-          ]
-        }
+        "create_time": 1684117060057,
+        "description": "基本上是怪人一個",
+        "discordId": "東東#8787",
+        "id": "-NVSBjaEYBX-kwFTk6wB",
+        "imageUrl": "https://github.com/alanchou0305/AI-Tool-King/blob/main/Image/%E9%99%B3%E8%8F%8A%E5%8B%95.jpg?raw=true",
+        "link": "https://www.instagram.com/koatony_0619/",
+        "model": "gpt4",
+        "title": "花花公子帥章魚",
+        "type": "職業軍人",
+        "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
       }
     ]
   }
