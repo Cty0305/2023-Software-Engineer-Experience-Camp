@@ -102,18 +102,6 @@ $(document).ready(function () {
     });
   });
 
-  // 點擊pagination-item 加.active icon变回"add"
-  $(".pagination-item").click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if ($(this).hasClass("active")) {
-      $(this).removeClass("active");
-    } else {
-      $(".pagination-item.active").removeClass("active");
-      $(this).addClass("active");
-    }
-  });
-
   // FAQ區塊
 
   // 點擊faq-item 加.clicked icon变回"add"
@@ -229,8 +217,6 @@ function changePage() {
 
       // 滑到搜尋區最上方
       searches.forEach((search) => {
-        console.log(search);
-
         search.scrollIntoView({ behavior: "smooth" });
       });
     });
