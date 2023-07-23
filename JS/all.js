@@ -188,7 +188,6 @@ getData(data);
 // 渲染 AI 工具
 function renderWorks() {
   let works = "";
-
   worksData.forEach((item) => {
     works += /*html*/ `
     <li class="card">
@@ -277,8 +276,8 @@ function nextPage(pagesData) {
 // 分頁選染至畫面
 function renderPages(pagesData) {
   let pageStr = "";
-  console.log(pagesData.has_pre);
-  console.log(pagesData.has_next);
+  // console.log(pagesData.has_pre);
+  // console.log(pagesData.has_next);
 
   pageStr += `
 	<li>
@@ -308,7 +307,7 @@ function renderPages(pagesData) {
 		</a>
 	</li>`;
 
-  console.log(pageStr);
+  // console.log(pageStr);
 
   pagination.innerHTML = pageStr;
 

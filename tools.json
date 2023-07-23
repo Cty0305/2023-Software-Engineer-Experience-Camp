@@ -2,7 +2,7 @@
   "status": true,
   "ai_works": {
     "page": {
-      "total_pages": 2,
+      "total_pages": 3,
       "current_page": 1,
       "has_pre": false,
       "has_next": true
@@ -87,10 +87,10 @@
   },
   "ai_works_page_2": {
     "page": {
-      "total_pages": 2,
+      "total_pages": 3,
       "current_page": 2,
       "has_pre": true,
-      "has_next": false
+      "has_next": true
     },
     "data": [
       {
@@ -105,6 +105,93 @@
         "title": "郵遞區號查詢",
         "type": "生活應用",
         "userId": "ULjcbLc350dwMjmKQnlzEPl9cRm2"
+      },
+      {
+        "create_time": 1685707291927,
+        "description": "這是一部 AI 心情點唱機，隨時推薦一首歌曲給您。",
+        "discordId": "Kulimusoda#2785",
+        "id": "-NWvyzmx11-ZshlicBYD",
+        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/9826a5e1-7e75-467f-8c8c-0715c771d2d4.jpeg?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=L9NrcBTFMHO3bHxIOC3ZG7yNpVhHs8NvNb27%2FpfrpVh6w6IveJ91Hf%2FPu9ElSnPItxrwzwSMbJryddkxvjNF1%2BwceHOPTcf2dXeQ7bwdiZVDE7pp5I685JzsXV3%2BkZ5T3szB8c8W%2FjD5MoqeTP4bqIWjkW6oxkfYMw7hLulIbqlOAQWCBBQvRfcD2j0RctFIBDdxEEieCCX88BjO7eOkiLnobv%2FSQf18VBbBffXw4X1hr1roFlndiXmfTbR6URy2eKjK98C5N1PsFw0N0wYzX4B1KoMvs7sgZGArKbXODdqIP1TlmKxHy8NpVZNsEKvsvKLMNalFMiVWAfhBdeuO2Q%3D%3D",
+        "link": "https://ai-jukebox-yuch3nchen.vercel.app/",
+        "model": "gpt3.5",
+        "status": true,
+        "title": "AI Jukebox",
+        "type": "生活應用",
+        "userId": "YHpZVz8UEXYx51GzQMTz9BAMO722"
+      },
+      {
+        "create_time": 1685711289119,
+        "description": "可以猜出您所描述的西遊記中的人物",
+        "discordId": "Akira#9996",
+        "id": "-NWwDEeq-uDHZfA-xFWl",
+        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/ae34b762-fc1c-4205-8faa-3e34309e7a8e.png?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=H%2BiYUt0vYK%2BqIWHLHDNSbWRWgeGdj34nv5WDAwE5R4kk4Znsbamr8I2uo4h6%2BxRW0liKGg3JbLIHkSBetsTeTwnEklplJpr0SoiOhyhkJ3Kf7ZU2RD8VlvdoD1rdXTqWZP3WyNdo6S8hSUo4E2N4l6L8zh2FqRCCy639BSQc44QANpUsrO93Ub4fz0ce9B8osRT8xhqv%2BL5X64qEPVx7Om51TTXNxSYIh5%2B9zbfWBIiFbHEEc165GhN6zLowiPy9bwdRbz4F7h82JZ9Tj%2FTPknoIAmqPA2vcorj%2FKrNei%2FNEVrRN6YkwW9qs4p%2BKSm5nl1C5HAdnm9Tzm7Hnq%2BjJYg%3D%3D",
+        "link": "https://web-ai-server.vercel.app/",
+        "model": "gpt3.5",
+        "status": true,
+        "title": "西遊記猜猜我是誰",
+        "type": "問答服務",
+        "userId": "zShGK4jiOkVcXsGfaAv4C6scTLv1"
+      },
+      {
+        "create_time": 1685798295291,
+        "description": "你的健康，我來幫你！！可以詢問血糖，血壓，血脂健檢指標異常該怎麼辦？",
+        "discordId": "connieK#2848 https://github.com/connieK8888/engineercamp",
+        "id": "-NX0P8PWFdOl4s96Oh69",
+        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/4445509b-3fec-4477-becb-1ca6cd54bfc7.png?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=he9oIS4qFxaeUoIe7uGNQ2F%2F96DBqOXPwzeQuKWkzAKeJyr8R%2FtBul50ufgvsZ2U4BxdA6CF4%2BkTcfP%2BOtl0ZwAX6oTa64RfoSdqxKQ8rkmhd2JLbVmI8IIX0WsAUAEk14E3JdvDRdwRlZfYYhGsgp3sDUJCK1UPGDABsSAFoGi3VXjmVwZD2NmR6ZYRFn0R1D%2FGrnGUdjhzUfNBkBGRq%2FsYOZTwd%2BTDo3R4rTrBKPhhBqiASaSTQTCR6QZ%2BHGyTZ8f%2BTiVvcdi68Jaup6HDiqMEINp1U2UCKTQ7NvYYqlcu2mLA0sJppa8F20DQgBFzlvq9yeIbrHTjV6RE7J653A%3D%3D",
+        "link": "https://engineercamp.vercel.app/",
+        "model": "gpt3.5",
+        "status": true,
+        "title": "健康小護士",
+        "type": "問答服務",
+        "userId": "KqHgYPasJxYEI2WP8PIWDS5JXZt2"
+      },
+      {
+        "create_time": 1685863650335,
+        "description": "為您的創意調酒取名稱",
+        "discordId": "Evaxof#1266",
+        "id": "-NX4ISE4YKHjQYoSQfx4",
+        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/cb1d757a-d575-46a0-a0c9-4117f91ffdc2.png?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=UEdqLTkqrwUfj1yWPOSANKpaTAfK0wkGwjaSvMWV7ucNG98jAClsE5CmmKdzuVIHJ0%2FSAHPXo4zvOuL7P9ybLjsnodDhRPhO8JxUtUvvbsVPf9kWcqP9LQtpf2HINIC0Rfa67XOak0gKLEm%2FEisxokxFmQmbt5qkh4kYa5OFT00vfN8%2Fuqo%2Fg1lpGLiKk8h%2BN3cXNc%2FX1nnMCPsrWymfDnNlRtM3GTOIn8KeVwGBuK9WRfSTCfB0SbiE1UNnDfzvZKJp7fR9GqOi9fMuSJ5kSpo1%2Bao6sTSCogihESV6nQ61%2BAHYCXgUeZRNrNPiipPHQnx7r3LfWcqnVRlvJmw8wA%3D%3D",
+        "link": "https://ai-cocktail.vercel.app/",
+        "model": "gpt3.5",
+        "status": true,
+        "title": "創意調酒師",
+        "type": "生活應用",
+        "userId": "E20bzzBY7Oc2S3TwOQj0BjXGjbK2"
+      },
+      {
+        "create_time": 1685867683855,
+        "description": "各縣市、鄉鎮區碼查詢小工具",
+        "discordId": "Hao#2485",
+        "id": "-NX4XpypVPIzc_-cv9Qs",
+        "imageUrl": "https://storage.googleapis.com/engineer-camp-5b706.appspot.com/images/96095347-5d3f-4bb0-8003-436b5334bc9f.jpg?GoogleAccessId=firebase-adminsdk-emcev%40engineer-camp-5b706.iam.gserviceaccount.com&Expires=16756675200&Signature=FCHrFFdMmQLSBzH6LuH8Rdk1PEKDuyCmJMptDz4QzuEDAFKUa0XRLsEY9BgucUSTb3cLyf4ouYdtLEIj0AL4MSTi4v3MRLgf9amr33IMeZhmUCoxQj0erksGNvUr7Z23t7AbaKcS1VK9D5IMLaNMsuP0p50Xvmt2ayTrzc1UEsZOOEsb2TT9Rve3E1Lsh35uEa6VK7vZ1cXVJJPyNJwWLRw4pfkljeg54yTMbe%2BazUEcSkaT72JHVRw7b0gDD70KRcvLqlnd%2B09oNFiVw9WMxBfQgFOhyPrT15FhQv7cBwhg7zkTfH3zETVVHIWLDSjDmDsG4hdnqf3tPYYajmvnjg%3D%3D",
+        "link": "https://area-code.vercel.app/",
+        "model": "gpt3.5",
+        "status": true,
+        "title": "蛙喀哩共!!",
+        "type": "生活應用",
+        "userId": "tGxRSPnFbGVeoQ2ShfaQuEDL7Mm2"
+      }
+    ]
+  },
+  "ai_works_page_3": {
+    "page": {
+      "total_pages": 3,
+      "current_page": 3,
+      "has_pre": true,
+      "has_next": false
+    },
+    "data": [
+      {
+        "create_time": 1684117060056,
+        "description": "攝影師",
+        "discordId": "星舟#8787",
+        "id": "-NVSBjaEYBX-kwFTk6wN",
+        "imageUrl": "https://raw.githubusercontent.com/alanchou0305/AI-Tool-King/main/Image/%E6%9E%97%E6%98%9F%E6%B4%B2%E6%89%8B%E6%96%B7%E6%8E%89.jpg",
+        "link": "https://www.instagram.com/daniel890629/",
+        "model": "gpt3.5",
+        "title": "學分精算師",
+        "type": "日系潮男",
+        "userId": "TlKTgV35xaZmvpSLqOsPj1m6j9B3"
       },
       {
         "create_time": 1685707291927,
