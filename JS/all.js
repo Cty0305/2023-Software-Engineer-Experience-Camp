@@ -86,22 +86,6 @@ $(document).ready(function () {
     $(".filter-selector-button-text").text("由舊到新");
   });
 
-  // 获取所有的.filter-item元素
-  const filterItems = document.querySelectorAll(".filter-item");
-
-  // 为每个.filter-item元素添加点击事件监听器
-  filterItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      // 切换.active类的存在
-      if ($(this).hasClass("active")) {
-        $(this).removeClass("active");
-      } else {
-        $(".filter-item.active").removeClass("active");
-        $(this).addClass("active");
-      }
-    });
-  });
-
   // FAQ區塊
 
   // 點擊faq-item 加.clicked icon变回"add"
@@ -306,10 +290,16 @@ function renderPages(pagesData) {
 const categories = document.querySelectorAll(".filter-list li");
 categories.forEach((item) => {
   item.addEventListener("click", () => {
+    categories.forEach((category) => {
+      category.classList.remove("active");
+    });
+
     if (item.textContent === "全部") {
       data.type = "";
+      item.classList.add("active");
     } else {
       data.type = item.textContent;
+      item.classList.add("active");
     }
 
     getData(data);
