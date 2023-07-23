@@ -709,6 +709,20 @@ body a {
   color: #ffffff;
   background-color: #020202;
 }
+.container-mid .container-mid-content .pagination .prePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  color: #020202;
+}
+.container-mid .container-mid-content .pagination .prePage:hover {
+  color: #ffffff;
+  background-color: #020202;
+}
 .container-mid .container-mid-content .pagination .nextPage {
   display: flex;
   align-items: center;
@@ -722,6 +736,9 @@ body a {
 .container-mid .container-mid-content .pagination .nextPage:hover {
   color: #ffffff;
   background-color: #020202;
+}
+.container-mid .container-mid-content .pagination .material-iconsdisabled {
+  display: none;
 }
 
 .container-bottom {
