@@ -552,7 +552,6 @@ body a {
   white-space: nowrap;
   cursor: pointer;
   color: #919191;
-  font-weight: 700;
 }
 .container-mid .container-mid-content .filter .filter-list .filter-item:hover {
   background-color: #f2f2f2;
@@ -685,7 +684,6 @@ body a {
 }
 .container-mid .container-mid-content .pagination {
   float: right;
-  max-width: 308px;
   display: flex;
   justify-content: space-between;
   gap: 4px;

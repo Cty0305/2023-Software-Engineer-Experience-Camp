@@ -543,7 +543,6 @@ body {
           white-space: nowrap;
           cursor: pointer;
           color: $black-60;
-          font-weight: 700;
           &:hover {
             background-color: $black-20;
             color: $black-100;
@@ -678,7 +677,6 @@ body {
     }
     .pagination {
       float: right;
-      max-width: 308px;
       display: flex;
       justify-content: space-between;
       gap: 4px;
