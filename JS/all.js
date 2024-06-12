@@ -180,8 +180,8 @@ function renderWorks() {
           <div class="author fs-lg">${item.discordId}</div>
         </div>
         <div class="card-share">
-          <a href="${item.link}"><div class="fs-lg">${item.type}</div></a>
-          <a href=""><span class="material-icons">share</span></a>
+          <a href=""><div class="fs-lg">${item.type}</div></a>
+          <a href="${item.link}"><span class="material-icons">open_in_new</span></a>
         </div>
       </div>
     </li>`;
@@ -223,7 +223,6 @@ function prePage(pagesData) {
     // 滑到搜尋區最上方
     searches.forEach((search) => {
       console.log(search);
-
       search.scrollIntoView({ behavior: "smooth" });
     });
   });
@@ -241,7 +240,6 @@ function nextPage(pagesData) {
     // 滑到搜尋區最上方
     searches.forEach((search) => {
       console.log(search);
-
       search.scrollIntoView({ behavior: "smooth" });
     });
   });
