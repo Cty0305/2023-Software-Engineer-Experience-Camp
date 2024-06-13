@@ -128,7 +128,6 @@ $(document).ready(function() {
   });
 });
 
-// 資料串接
 const apiPath =
   "https://raw.githubusercontent.com/Cty0305/2023-Software-Engineer-Experience-Camp/main/tools.json";
 const cardList = document.querySelector(".card-list");
@@ -144,142 +143,140 @@ const data = {
   search: "",
 };
 
+// 获取数据函数
 function getData({ type, sort, page, search }) {
-  const apiUrl = `${apiPath}?sort=${sort}&page=${page}&${
-    type ? `type=${type}&` : ""
-  }${search ? `search=${search}` : ""}`;
+  axios
+    .get(apiPath)
+    .then((res) => {
+      worksData = res.data.ai_works.data;
+      pagesData = res.data.ai_works.page;
 
-  axios.get(apiUrl).then((res) => {
-    worksData = res.data.ai_works.data;
-    pagesData = res.data.ai_works.page;
-
-    console.log(res.data);
-    renderWorks();
-    renderPages(pagesData);
-  });
+      renderWorks();
+      renderPages(pagesData);
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
 }
 
-getData(data);
+// 页面加载时调用 getData
+document.addEventListener("DOMContentLoaded", () => {
+  getData(data);
+});
 
 // 渲染 AI 工具
 function renderWorks() {
   let works = "";
   worksData.forEach((item) => {
-    works += /*html*/ `
-    <li class="card">
-      <div class="card-img">
-        <img src="${item.imageUrl}" alt="${item.title}">
-      </div>
-      <div class="card-content">
-        <div class="card-detail">
-          <div class="fs-h6">${item.title}</div>
-          <p class="fs-md">${item.description}</p>
+    if (data.type === "" || item.type === data.type) {
+      works += /*html*/ `
+      <li class="card">
+        <div class="card-img">
+          <img src="${item.imageUrl}" alt="${item.title}">
         </div>
-        <div class="card-info">
-          <div class="fs-lg">AI 模型</div>
-          <div class="author fs-lg">${item.discordId}</div>
+        <div class="card-content">
+          <div class="card-detail">
+            <div class="fs-h6">${item.title}</div>
+            <p class="fs-md">${item.description}</p>
+          </div>
+          <div class="card-info">
+            <div class="fs-lg">AI 模型</div>
+            <div class="author fs-lg">${item.discordId}</div>
+          </div>
+          <div class="card-share">
+            <a href=""><div class="fs-lg">${item.type}</div></a>
+            <a href="${item.link}"><span class="material-icons">open_in_new</span></a>
+          </div>
         </div>
-        <div class="card-share">
-          <a href=""><div class="fs-lg">${item.type}</div></a>
-          <a href="${item.link}"><span class="material-icons">open_in_new</span></a>
-        </div>
-      </div>
-    </li>`;
+      </li>`;
+    }
   });
   cardList.innerHTML = works;
 }
 
-// 切換分頁
-const searches = document.querySelectorAll(".container-mid");
-
+// 点击分页项切换页面
 function changePage() {
   const pageLinks = document.querySelectorAll(".pagination-item");
-  let pageId = "";
 
   pageLinks.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
-      pageId = e.target.dataset.page;
-      data.page = Number(pageId);
-      getData(data);
+      const pageId = e.target.dataset.page;
+      data.page = Number(pageId); // 更新当前页码
+      getData(data); // 获取新数据
 
-      // 滑到搜尋區最上方
-      searches.forEach((search) => {
-        search.scrollIntoView({ behavior: "smooth" });
-      });
+      // 滑到搜索区最上方
+      document
+        .querySelector(".container-mid")
+        .scrollIntoView({ behavior: "smooth" });
     });
   });
 }
 
-// 上一頁
+// 点击上一页按钮
 function prePage(pagesData) {
-  const prePage = document.querySelector(".prePage");
+  const prePageBtn = document.querySelector(".prePage");
 
-  prePage.addEventListener("click", (e) => {
+  prePageBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    data.page = Number(pagesData.current_page) - 1;
-    getData(data);
+    data.page = Number(pagesData.current_page) - 1; // 更新当前页码
+    getData(data); // 获取新数据
 
-    // 滑到搜尋區最上方
-    searches.forEach((search) => {
-      console.log(search);
-      search.scrollIntoView({ behavior: "smooth" });
-    });
+    // 滑到搜索区最上方
+    document
+      .querySelector(".container-mid")
+      .scrollIntoView({ behavior: "smooth" });
   });
 }
 
-// 下一頁
+// 点击下一页按钮
 function nextPage(pagesData) {
-  const nextPage = document.querySelector(".nextPage");
+  const nextPageBtn = document.querySelector(".nextPage");
 
-  nextPage.addEventListener("click", (e) => {
+  nextPageBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    data.page = Number(pagesData.current_page) + 1;
-    getData(data);
+    data.page = Number(pagesData.current_page) + 1; // 更新当前页码
+    getData(data); // 获取新数据
 
-    // 滑到搜尋區最上方
-    searches.forEach((search) => {
-      console.log(search);
-      search.scrollIntoView({ behavior: "smooth" });
-    });
+    // 滑到搜索区最上方
+    document
+      .querySelector(".container-mid")
+      .scrollIntoView({ behavior: "smooth" });
   });
 }
 
-// 分頁選染至畫面
+// 分页渲染至页面
 function renderPages(pagesData) {
+  // 清空 pagination 内容，避免重复渲染
+  pagination.innerHTML = "";
+
   let pageStr = "";
-  // console.log(pagesData.has_pre);
-  // console.log(pagesData.has_next);
 
   pageStr += `
-	<li>
-		<a href="#" class="prePage material-icons${
+  <li>
+    <a href="#" class="prePage material-icons ${
       pagesData.has_pre ? "" : "disabled"
-    } ">
-				keyboard_arrow_left
-		</a>
-	</li>`;
+    }">
+      keyboard_arrow_left
+    </a>
+  </li>`;
 
   for (let i = 1; i <= pagesData.total_pages; i += 1) {
     pageStr += `<li>
-		<a href="#" class="pagination-item fs-md ${
-      pagesData.current_page == i ? "active" : ""
-    } ${
-      pagesData.current_page == i ? "disabled" : ""
-    }" data-page="${i}">${i}</a>
-	</li>`;
+      <a href="#" class="pagination-item fs-md ${
+        pagesData.current_page == i ? "active" : ""
+      }" data-page="${i}">${i}</a>
+    </li>`;
   }
 
   pageStr += `
-	<li>
-		<a href="#" class="nextPage material-icons${
-      pagesData.has_next ? "" : "disabled "
+  <li>
+    <a href="#" class="nextPage material-icons ${
+      pagesData.has_next ? "" : "disabled"
     }">
-				keyboard_arrow_right
-		</a>
-	</li>`;
-
-  // console.log(pageStr);
+      keyboard_arrow_right
+    </a>
+  </li>`;
 
   pagination.innerHTML = pageStr;
 
@@ -288,8 +285,16 @@ function renderPages(pagesData) {
   nextPage(pagesData);
 }
 
-// 分類標籤切換
+// 分类标签切换
 const categories = document.querySelectorAll(".filter-list li");
+
+// 预设 "全部" 标签为 active
+categories.forEach((item) => {
+  if (item.textContent === "全部") {
+    item.classList.add("active");
+  }
+});
+
 categories.forEach((item) => {
   item.addEventListener("click", () => {
     categories.forEach((category) => {
@@ -298,12 +303,12 @@ categories.forEach((item) => {
 
     if (item.textContent === "全部") {
       data.type = "";
-      item.classList.add("active");
     } else {
       data.type = item.textContent;
-      item.classList.add("active");
     }
+    item.classList.add("active");
 
+    data.page = 1; // 切换分类时重置到第一页
     getData(data);
   });
 });
