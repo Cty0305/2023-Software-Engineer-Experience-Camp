@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Slider
   const swiper = new Swiper(".testimonial-content", {
     slidesPerView: 3,
@@ -32,12 +32,12 @@ $(document).ready(function() {
   // Filter
 
   // 點擊.filter-sign-button按钮时切换.show
-  $(".filter-sign-button").click(function() {
+  $(".filter-sign-button").click(function () {
     $(".filter-sign-dropdown-menu").toggleClass("show");
   });
 
   // 點擊其他地方移除.show
-  $(document).click(function(event) {
+  $(document).click(function (event) {
     var target = $(event.target);
     if (
       !target.closest(".filter-sign-button").length &&
@@ -48,7 +48,7 @@ $(document).ready(function() {
   });
 
   // 點擊選項後更改Filter-sign-button內容
-  $(".filter-sign-dropdown-menu .option").click(function(e) {
+  $(".filter-sign-dropdown-menu .option").click(function (e) {
     e.preventDefault();
     var optionText = $(this).text();
     $(".filter-sign-button-text").text(optionText);
@@ -59,12 +59,12 @@ $(document).ready(function() {
   });
 
   // 點擊.filter-selector-button按钮时切换.show
-  $(".filter-selector-button").click(function() {
+  $(".filter-selector-button").click(function () {
     $(".filter-selector-dropdown-menu").toggleClass("show");
   });
 
   // 點擊其他地方移除.show
-  $(document).click(function(event) {
+  $(document).click(function (event) {
     var target = $(event.target);
     if (
       !target.closest(".filter-selector-button").length &&
@@ -74,40 +74,24 @@ $(document).ready(function() {
     }
   });
 
-  $(".new-to-old").click(function(e) {
-    e.preventDefault();
-    $(".filter-selector-dropdown-menu").toggleClass("show");
-    $(".filter-selector-button-text").text("由新到舊");
-  });
-
-  $(".old-to-new").click(function(e) {
-    e.preventDefault();
-    $(".filter-selector-dropdown-menu").toggleClass("show");
-    $(".filter-selector-button-text").text("由舊到新");
-  });
-
   // FAQ區塊
 
   // 點擊faq-item 加.clicked icon变回"add"
-  $(".faq-item").click(function(event) {
+  $(".faq-item").click(function (event) {
     event.stopPropagation();
     if ($(this).hasClass("clicked")) {
       $(this).removeClass("clicked");
-      $(this)
-        .find(".material-icons")
-        .text("add");
+      $(this).find(".material-icons").text("add");
     } else {
       $(".faq-item.clicked").removeClass("clicked");
       $(".faq-item .material-icons").text("add");
       $(this).addClass("clicked");
-      $(this)
-        .find(".material-icons")
-        .text("remove");
+      $(this).find(".material-icons").text("remove");
     }
   });
 
   // 點擊其他地方移除.clicked icon变回"add"
-  $(document).click(function(event) {
+  $(document).click(function (event) {
     var clickedElement = event.target;
 
     if (!$(clickedElement).hasClass("faq-item")) {
@@ -116,7 +100,7 @@ $(document).ready(function() {
     }
 
     // backtotop
-    $(".backtotop").click(function(e) {
+    $(".backtotop").click(function (e) {
       e.preventDefault();
       $("html,body").animate(
         {
@@ -150,6 +134,13 @@ function getData({ type, sort, page, search }) {
     .then((res) => {
       worksData = res.data.ai_works.data;
       pagesData = res.data.ai_works.page;
+
+      // 根据 sort 进行排序
+      worksData.sort((a, b) => {
+        const dateA = new Date(a.create_time);
+        const dateB = new Date(b.create_time);
+        return sort === 1 ? dateB - dateA : dateA - dateB;
+      });
 
       renderWorks();
       renderPages(pagesData);
@@ -311,4 +302,20 @@ categories.forEach((item) => {
     data.page = 1; // 切换分类时重置到第一页
     getData(data);
   });
+});
+
+$(".new-to-old").click(function (e) {
+  e.preventDefault();
+  $(".filter-selector-dropdown-menu").toggleClass("show");
+  $(".filter-selector-button-text").text("由新到舊");
+  data.sort = 1; // 1 表示由新到舊
+  getData(data); // 重新获取并渲染数据
+});
+
+$(".old-to-new").click(function (e) {
+  e.preventDefault();
+  $(".filter-selector-dropdown-menu").toggleClass("show");
+  $(".filter-selector-button-text").text("由舊到新");
+  data.sort = -1; // -1 表示由舊到新
+  getData(data); // 重新获取并渲染数据
 });
