@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -199,6 +200,12 @@ body a {
     line-height: 1.5;
   }
 }
+.disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5; /* 可选：让禁用的链接看起来灰掉 */
+}
+
 .container-top {
   max-width: 1326px;
   padding: 0 15px;

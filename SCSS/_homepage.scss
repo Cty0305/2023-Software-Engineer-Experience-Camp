@@ -153,6 +153,12 @@ body {
   }
 }
 
+.disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5; /* 可选：让禁用的链接看起来灰掉 */
+}
+
 .container-top {
   max-width: 1326px;
   padding: 0 15px;
