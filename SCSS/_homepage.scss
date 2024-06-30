@@ -156,7 +156,7 @@ body {
 .disabled {
   cursor: default;
   pointer-events: none;
-  opacity: 0.5; /* 可选：让禁用的链接看起来灰掉 */
+  opacity: 0.1; /* 可选：让禁用的链接看起来灰掉 */
 }
 
 .container-top {
