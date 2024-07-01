@@ -99,7 +99,7 @@ export function item() {
             </div>
             <div class="card-share">
               <a href="#" class="item-type" data-type="${item.type}"><div class="fs-lg">${item.type}</div></a>
-              <a href="${item.link}" target="_blank"><span class="material-icons">open_in_new</span></a>
+              <a href="${item.link}" class="item-link" target="_blank"><span class="material-icons">open_in_new</span></a>
             </div>
           </div>
         </li>`;
@@ -217,16 +217,15 @@ export function item() {
     scrollToTop();
   });
 
-  // 在 main.js 或 item.js 中的合適位置
   document.addEventListener("click", (e) => {
-    e.preventDefault();
     const target = e.target;
 
-    // 检查点击的元素是否是 card_share > fs-lg 中的链接
+    // 检查点击的元素是否是 .item-type 中的链接
     if (target.closest(".item-type")) {
+      e.preventDefault(); // 只在这里阻止默认行为
       const type = target.closest(".item-type").dataset.type; // 获取点击的 type 值
 
-      // 更新 filter-list 中的激活狀態
+      // 更新 filter-list 中的激活状态
       const filterItems = document.querySelectorAll(
         ".filter-list .filter-item"
       );
