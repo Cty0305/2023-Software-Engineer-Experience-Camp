@@ -116,20 +116,21 @@ export function item() {
     e.preventDefault();
     const target = e.target;
 
+    if (target.classList.contains("disabled")) {
+      return;
+    }
+
     if (target.classList.contains("pagination-item")) {
       data.page = Number(target.dataset.page);
     } else if (target.classList.contains("prePage")) {
-      if (pagesData.has_pre) {
-        data.page -= 1;
-      }
+      data.page -= 1;
     } else if (target.classList.contains("nextPage")) {
-      if (pagesData.has_next) {
-        data.page += 1;
-      }
+      data.page += 1;
     } else {
       return;
     }
 
+    console.log("Fetching data with:", data);
     getData(data);
     scrollToTop();
   }
