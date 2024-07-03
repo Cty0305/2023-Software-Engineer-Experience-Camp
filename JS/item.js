@@ -9,6 +9,7 @@ export function item() {
     "https://raw.githubusercontent.com/Cty0305/2023-Software-Engineer-Experience-Camp/main/tools.json";
   const cardList = document.querySelector(".card-list");
   const pagination = document.querySelector(".pagination");
+  const searchInput = document.querySelector(".searchbar input[type='search']");
 
   let worksData = [];
   let pagesData = {
@@ -41,6 +42,15 @@ export function item() {
         // 根据选定的类型进行筛选
         if (type !== "") {
           worksData = worksData.filter((item) => item.type === type);
+        }
+
+        // 根据搜索关键字进行筛选
+        if (search !== "") {
+          worksData = worksData.filter(
+            (item) =>
+              item.title.toLowerCase().includes(search.toLowerCase()) ||
+              item.description.toLowerCase().includes(search.toLowerCase())
+          );
         }
 
         // 設置分頁信息
@@ -250,5 +260,13 @@ export function item() {
       getData(data);
       scrollToTop();
     }
+  });
+
+  // 搜索功能
+  searchInput.addEventListener("input", () => {
+    data.search = searchInput.value;
+    data.page = 1; // 搜索时重置到第一页
+    getData(data);
+    scrollToTop();
   });
 }
